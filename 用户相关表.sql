@@ -1,791 +1,647 @@
-/*
-Navicat SQL Server Data Transfer
+prompt PL/SQL Developer Export Tables for user TYDIC01@192.168.1.4:1521/ORCL
+prompt Created by fan on 2019Äê4ÔÂ22ÈÕ
+set feedback off
+set define off
 
-Source Server         :
-Source Server Version : 105000
-Source Host           : 192.168.1.156:1433
-Source Database       : cdny
-Source Schema         : dbo
-
-Target Server Type    : SQL Server
-Target Server Version : 105000
-File Encoding         : 65001
-
-Date: 2018-07-31 20:36:09
-*/
-
-
--- ----------------------------
--- Table structure for SYS_FUNC
--- ----------------------------
-DROP TABLE [dbo].[SYS_FUNC]
-GO
-CREATE TABLE [dbo].[SYS_FUNC] (
-[ID] varchar(50) NOT NULL ,
-[FUNC_CODE] varchar(100) NULL ,
-[NAME] varchar(100) NULL ,
-[FUNC_TYPE] varchar(20) NULL ,
-[ISOPEN] varchar(20) NULL ,
-[OPENDATE] date NULL ,
-[FUNC_URL] varchar(200) NULL ,
-[FUNC_DESC] varchar(600) NULL ,
-[PID] varchar(50) NULL ,
-[FUNC_LEVEL] int NULL ,
-[FUNC_SEQ] int NULL ,
-[ISLEAF] varchar(20) NULL ,
-[ISPARENT] varchar(20) NULL ,
-[CREATEUSER] varchar(100) NULL ,
-[CREATETIME] date NULL ,
-[BZ] varchar(800) NULL ,
-[VERSION] int NULL ,
-[DELETED] varchar(20) NULL ,
-[CLASSFIELD] varchar(100) NULL ,
-[OPEN] int NULL ,
-[SITEID] varchar(20) NULL ,
-[GROUPTYPE] varchar(10) NULL ,
-[SERVICEADDR] varchar(300) NULL ,
-[SELECTLAYER] varchar(300) NULL ,
-[TABLENAME] varchar(100) NULL 
+prompt Creating SYS_FUNC...
+create table SYS_FUNC
+(
+  id          VARCHAR2(50) not null,
+  func_code   VARCHAR2(100),
+  name        VARCHAR2(100),
+  func_type   VARCHAR2(20),
+  isopen      VARCHAR2(20),
+  opendate    DATE,
+  func_url    VARCHAR2(200),
+  func_desc   VARCHAR2(600),
+  pid         VARCHAR2(50),
+  func_level  INTEGER,
+  func_seq    INTEGER,
+  isleaf      VARCHAR2(20),
+  isparent    VARCHAR2(20),
+  createuser  VARCHAR2(100),
+  createtime  DATE,
+  bz          VARCHAR2(800),
+  version     INTEGER,
+  deleted     VARCHAR2(20),
+  classfield  VARCHAR2(100),
+  open        INTEGER,
+  siteid      VARCHAR2(20),
+  grouptype   VARCHAR2(10),
+  serviceaddr VARCHAR2(300),
+  selectlayer VARCHAR2(300),
+  tablename   VARCHAR2(100)
 )
+tablespace OLDSUN01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
 
-
-GO
-
--- ----------------------------
--- Records of SYS_FUNC
--- ----------------------------
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'1', null, N'菜单管理', null, N'1', null, null, null, N'0', null, null, N'0', N'1', null, null, null, null, null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028198163633ca301636394362d0002', null, N'数字地图', N'1', N'0', null, N'/SZMap.jsp', null, N'4028810260d4809b0160d4be9e160000', null, N'1', N'0', N'1', null, null, null, N'3', null, N'glyphicon glyphicon-globe', null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028198163633ca30163639d19260003', null, N'土壤检测', N'1', N'0', null, N'/TRDetection.jsp', null, N'4028810260d4809b0160d4be9e160000', null, N'4', N'0', N'1', null, null, null, N'3', null, N'glyphicon glyphicon-road', null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028198163633ca30163639e467e0004', null, N'气候管理', N'1', N'0', null, N'/wearth/wearth.jsp', null, N'4028810260d4809b0160d4be9e160000', null, N'5', N'0', N'1', null, null, null, N'3', null, N'glyphicon glyphicon-leaf', null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028198163633ca30163639f227b0005', null, N'基础管理', N'1', N'0', null, N'/', null, N'4028810260d4809b0160d4be9e160000', null, N'7', N'0', N'1', null, null, null, N'3', null, N'glyphicon glyphicon-th-list', null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028198163633ca30163639f9d180006', null, N'人员库管理', N'2', N'0', null, N'/Personnel.jsp', null, N'4028198163633ca30163639f227b0005', null, N'1', N'0', N'1', null, null, null, N'1', N'0', null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028198163633ca30163639fee760007', null, N'作物库管理', N'2', N'0', null, N'/Plant.jsp', null, N'4028198163633ca30163639f227b0005', null, N'2', N'0', N'1', null, null, null, N'1', N'0', null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028198163633ca3016363a047860008', null, N'农资库管理', N'2', N'0', null, N'/Resources.jsp', null, N'4028198163633ca30163639f227b0005', null, N'3', N'0', N'1', null, null, null, N'1', N'0', null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028198163633ca3016363a0a1bf0009', null, N'设备库管理', N'2', N'0', null, N'/Work.jsp', null, N'4028198163633ca30163639f227b0005', null, N'4', N'0', N'1', null, null, null, N'2', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028198163633ca3016363a289e8000a', null, N'服务管理', N'2', N'0', null, N'/system/mapServer.jsp', null, N'402881cd5fbd2daf015fbea277a60000', null, N'4', N'0', N'1', null, null, null, N'2', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028810260d4809b0160d4be9e160000', null, N'智慧农业云平台', N'0', N'0', null, N'/', null, N'1', null, N'1', N'0', N'1', N'lsf', null, null, N'4', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881a25fd20311015fd20a6fdb0004', N'RoleAdmin_New', N'新建', N'3', N'1', null, N'role_add', N'新建', N'402881cd5fbd2daf015fbea682710003', N'4', N'1', N'0', N'1', N'管理员', null, N'角色管理模块 新建角色功能', N'5', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fbd2daf015fbea277a60000', null, N'系统管理', N'1', N'0', null, N'/', null, N'4028810260d4809b0160d4be9e160000', null, N'8', N'0', N'1', N'管理员', null, N'系统管理模块', N'11', null, N'glyphicon glyphicon-cog', N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fbd2daf015fbea419fc0001', null, N'用户管理', N'2', N'0', null, N'/system/userControl.jsp', null, N'402881cd5fbd2daf015fbea277a60000', null, N'1', N'0', N'1', null, null, N'111', N'2', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fbd2daf015fbea682710003', null, N'角色管理', N'2', N'0', null, N'/system/roleManage.jsp', null, N'402881cd5fbd2daf015fbea277a60000', null, N'2', N'0', N'1', N'1', null, N'角色管理功能页面', N'6', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fbd2daf015fbea713d30004', null, N'种植管理', N'1', N'0', null, N'/ZZManage.jsp', null, N'4028810260d4809b0160d4be9e160000', null, N'3', N'0', N'1', null, null, null, N'12', null, N'glyphicon glyphicon-tree-deciduous', N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fc2b709015fc2d6b7ea0000', null, N'系统名称', N'0', N'0', null, N'/images/title_white.png', null, N'4028810260d4809b0160d4be9e160000', null, N'9', N'0', N'1', null, null, null, N'9', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fc2b709015fc2ff1ca40006', null, N'区划管理', N'1', N'0', null, N'/index.jsp', null, N'4028810260d4809b0160d4be9e160000', null, N'2', N'0', N'1', N'管理员', null, N'首页', N'9', null, N'glyphicon glyphicon-dashboard', N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fc2b709015fc3716f6c001a', null, N'菜单管理', N'2', N'0', null, N'/system/menu.jsp', null, N'402881cd5fbd2daf015fbea277a60000', null, N'3', N'0', N'1', null, null, null, N'5', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fc2b709015fc371bd68001b', null, N'字典管理', N'2', N'0', null, N'/system/dictionaries.jsp', null, N'402881cd5fbd2daf015fbea277a60000', null, N'5', N'0', N'1', null, null, null, N'3', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd397bdf001f', N'RoleAdmin_Edit', N'编辑', N'3', N'1', null, N'role_update', N'编辑', N'402881cd5fbd2daf015fbea682710003', N'4', N'2', N'0', N'1', N'管理员', null, N'角色管理 编辑功能', N'5', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd3a99470020', N'RoleAdmin_Delete', N'删除', N'3', N'1', null, N'role_delete', N'角色删除', N'402881cd5fbd2daf015fbea682710003', N'4', N'3', N'0', N'1', N'管理员', null, N'角色管理 删除', N'3', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd3bba8f0021', N'RoleAdmin_Right', N'角色授权', N'3', N'1', null, N'role_authorize', N'角色授权', N'402881cd5fbd2daf015fbea682710003', N'4', N'4', N'0', N'1', N'管理员', null, N'角色管理 授权', N'8', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd3e1f830022', N'MenuAdmin_New', N'新建', N'3', N'1', null, N'fun_add', null, N'402881cd5fc2b709015fc3716f6c001a', N'4', N'1', N'0', N'1', N'管理员', null, N'菜单管理 新建', N'2', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd42144d0023', N'MenuAdmin_Delete', N'删除', N'3', N'1', null, N'fun_delete', null, N'402881cd5fc2b709015fc3716f6c001a', N'4', N'2', N'0', N'1', N'管理员', null, N'删除菜单项', N'2', null, null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd43cbdc0025', N'MenuAdmin_Save', N'保存', N'3', N'1', null, N'fun_save', N'保存', N'402881cd5fc2b709015fc3716f6c001a', N'4', N'4', N'0', N'1', N'管理员', null, N'保存', N'2', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd464dc00027', N'RoleAdmin_Query', N'查询', N'3', N'1', null, N'role_select', N'查询（包含高级查询）', N'402881cd5fbd2daf015fbea682710003', N'4', N'5', N'0', N'1', N'管理员', null, N'查询（包含高级查询）', N'2', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd474e910028', null, N'新建', N'3', N'0', null, N'dict_add', null, N'402881cd5fc2b709015fc371bd68001b', null, N'1', N'0', N'1', N'管理员', null, N'新建字典', N'3', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd47f76c0029', null, N'编辑', N'3', N'0', null, N'dict_edit', null, N'402881cd5fc2b709015fc371bd68001b', null, N'2', N'0', N'1', N'管理员', null, N'编辑字典', N'3', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd490c71002a', null, N'删除', N'3', N'0', null, N'dict_delete', null, N'402881cd5fc2b709015fc371bd68001b', null, N'3', N'0', N'1', N'管理员', null, N'删除字典', N'3', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd4bc895002c', N'DictAdmin_Save', N'保存', N'3', N'1', null, N'dict_save', N'保存', N'402881cd5fc2b709015fc371bd68001b', N'4', N'5', N'0', N'1', N'管理员', null, N'保存', N'2', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd4d3dc7002d', N'UserAdmin_New', N'新建', N'3', N'1', null, N'user_add', N'新建', N'402881cd5fbd2daf015fbea419fc0001', N'4', N'1', N'0', N'1', N'管理员', null, N'新建', N'2', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd5fdd05af015fdd4f16db002e', N'UserAdmin_Delete', N'删除', N'3', N'1', null, N'user_delete', N'删除', N'402881cd5fbd2daf015fbea419fc0001', N'4', N'2', N'0', N'1', N'管理员', null, N'删除', N'3', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd6005a026016005d45011005c', N'UserAdmin_revamp', N'修改', N'3', N'1', null, N'user_revamp', null, N'402881cd5fbd2daf015fbea419fc0001', null, N'3', N'0', N'1', N'cyq', null, null, N'1', N'0', null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd6005a026016005db7589005d', N'UserAdmin_Query', N'查询', N'3', N'1', null, N'user_select', null, N'402881cd5fbd2daf015fbea419fc0001', null, N'4', N'0', N'1', N'cyq', null, null, N'1', N'0', null, N'1', N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'402881cd609fe01b0160a008c75c0001', N'UserAdmin_Right', N'用户授权', N'3', N'1', null, N'user_authorize', null, N'402881cd5fbd2daf015fbea419fc0001', null, N'6', N'0', N'1', N'cyq', null, null, N'2', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028da63636b78bf01636c8cbebf0003', null, N'天空地遥感反演', N'1', N'0', null, N'/', null, N'4028810260d4809b0160d4be9e160000', null, N'6', N'0', N'1', null, null, null, N'2', null, N'glyphicon glyphicon-retweet', null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028da63636b78bf01636c901c2a0004', null, N'长势监测', N'2', N'0', null, N'/fanyan/one.jsp', null, N'4028da63636b78bf01636c8cbebf0003', null, N'1', N'0', N'1', null, null, null, N'6', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028da63636b78bf01636c91046e0005', null, N'成熟度监测', N'2', N'0', null, N'/fanyan/two.jsp', null, N'4028da63636b78bf01636c8cbebf0003', null, N'2', N'0', N'1', null, null, null, N'2', null, null, null, N'1', null, null, null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC] ([ID], [FUNC_CODE], [NAME], [FUNC_TYPE], [ISOPEN], [OPENDATE], [FUNC_URL], [FUNC_DESC], [PID], [FUNC_LEVEL], [FUNC_SEQ], [ISLEAF], [ISPARENT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [CLASSFIELD], [OPEN], [SITEID], [GROUPTYPE], [SERVICEADDR], [SELECTLAYER], [TABLENAME]) VALUES (N'4028da63636b78bf01636c917ec50006', null, N'品质检测', N'2', N'0', null, N'/fanyan/three.jsp', null, N'4028da63636b78bf01636c8cbebf0003', null, N'3', N'0', N'1', null, null, null, N'2', null, null, null, N'1', null, null, null, null)
-GO
-GO
-
--- ----------------------------
--- Table structure for SYS_FUNC_ROLE_R
--- ----------------------------
-DROP TABLE [dbo].[SYS_FUNC_ROLE_R]
-GO
-CREATE TABLE [dbo].[SYS_FUNC_ROLE_R] (
-[FUNC_ID] varchar(50) NULL ,
-[FUNC_CODE] varchar(100) NULL ,
-[FUNC_NAME] varchar(200) NULL ,
-[ROLE_ID] varchar(50) NULL ,
-[ROLE_CODE] varchar(100) NULL ,
-[ROLE_NAME] varchar(200) NULL ,
-[AUTHUSER] varchar(200) NULL ,
-[AUTHTIME] datetime NULL ,
-[DELETED] varchar(20) NULL ,
-[ID] varchar(50) NOT NULL ,
-[VERSION] int NULL 
+prompt Creating SYS_FUNC_ROLE_R...
+create table SYS_FUNC_ROLE_R
+(
+  func_id   VARCHAR2(50),
+  func_code VARCHAR2(100),
+  func_name VARCHAR2(200),
+  role_id   VARCHAR2(50),
+  role_code VARCHAR2(100),
+  role_name VARCHAR2(200),
+  authuser  VARCHAR2(200),
+  authtime  DATE,
+  deleted   VARCHAR2(20),
+  id        VARCHAR2(50) not null,
+  version   INTEGER
 )
+tablespace OLDSUN01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
 
-
-GO
-
--- ----------------------------
--- Records of SYS_FUNC_ROLE_R
--- ----------------------------
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fbd2daf015fbea713d30004', null, null, N'615c89f44a774873b48e7f004029ca0d', null, null, null, N'2018-05-15 09:09:52.750', N'0', N'402819816363a69a016363b4f177002a', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca30163639f227b0005', null, null, N'615c89f44a774873b48e7f004029ca0d', null, null, null, N'2018-05-15 09:09:52.750', N'0', N'402819816363a69a016363b4f18f002b', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca30163639f9d180006', null, null, N'615c89f44a774873b48e7f004029ca0d', null, null, null, N'2018-05-15 09:09:52.750', N'0', N'402819816363a69a016363b4f1a9002c', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca30163639fee760007', null, null, N'615c89f44a774873b48e7f004029ca0d', null, null, null, N'2018-05-15 09:09:52.750', N'0', N'402819816363a69a016363b4f1bf002d', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca3016363a047860008', null, null, N'615c89f44a774873b48e7f004029ca0d', null, null, null, N'2018-05-15 09:09:52.750', N'0', N'402819816363a69a016363b4f1d6002e', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca3016363a0a1bf0009', null, null, N'615c89f44a774873b48e7f004029ca0d', null, null, null, N'2018-05-15 09:09:52.750', N'0', N'402819816363a69a016363b4f1eb002f', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fc2b709015fc2d6b7ea0000', null, null, N'615c89f44a774873b48e7f004029ca0d', null, null, null, N'2018-05-15 09:09:52.750', N'0', N'402819816363a69a016363b4f2000030', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fbd2daf015fbea277a60000', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a41801637254045d0038', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fbd2daf015fbea419fc0001', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a41801637254046e0039', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd4d3dc7002d', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a418016372540481003a', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fbd2daf015fbea682710003', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a418016372540493003b', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881a25fd20311015fd20a6fdb0004', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a4180163725404a6003c', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd397bdf001f', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a4180163725404b6003d', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd3a99470020', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a4180163725404c5003e', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd464dc00027', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a4180163725404d5003f', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fc2b709015fc3716f6c001a', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a4180163725404e40040', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd3e1f830022', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a4180163725404f60041', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca3016363a289e8000a', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a4180163725405080042', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fc2b709015fc371bd68001b', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a41801637254051b0043', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd474e910028', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a41801637254052c0044', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd47f76c0029', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a4180163725405420045', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd490c71002a', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a4180163725405580046', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd4bc895002c', null, null, N'25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, N'2018-05-18 05:18:18.840', N'0', N'40282d816370a4180163725405710047', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028810260d4809b0160d4be9e160000', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921ebf0007', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca301636394362d0002', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921ec90008', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fc2b709015fc2ff1ca40006', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921ed20009', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fbd2daf015fbea713d30004', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921ed7000a', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca30163639d19260003', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921edc000b', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca30163639e467e0004', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921ee1000c', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028da63636b78bf01636c8cbebf0003', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921ee6000d', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028da63636b78bf01636c901c2a0004', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921eeb000e', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028da63636b78bf01636c91046e0005', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921eef000f', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028da63636b78bf01636c917ec50006', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921ef30010', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca30163639f227b0005', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921ef80011', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca30163639f9d180006', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921efc0012', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca30163639fee760007', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921eff0013', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca3016363a047860008', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f020014', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca3016363a0a1bf0009', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f050015', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fbd2daf015fbea277a60000', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f080016', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fbd2daf015fbea419fc0001', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f0b0017', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd4d3dc7002d', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f0e0018', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd4f16db002e', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f110019', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd6005a026016005d45011005c', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f15001a', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd6005a026016005db7589005d', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f18001b', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd4ff988002f', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f1b001c', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd609fe01b0160a008c75c0001', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f1e001d', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fbd2daf015fbea682710003', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f21001e', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881a25fd20311015fd20a6fdb0004', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f24001f', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd397bdf001f', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f270020', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd3a99470020', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f2a0021', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd3bba8f0021', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f2d0022', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd464dc00027', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f300023', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fc2b709015fc3716f6c001a', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f330024', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd3e1f830022', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f360025', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd42144d0023', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f390026', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd42cd710024', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f3c0027', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd43cbdc0025', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f3f0028', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd44cb640026', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f420029', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'4028198163633ca3016363a289e8000a', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f45002a', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fc2b709015fc371bd68001b', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f48002b', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd474e910028', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f4b002c', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd47f76c0029', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f4e002d', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd490c71002a', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f51002e', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd4aa169002b', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f54002f', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fdd05af015fdd4bc895002c', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f570030', N'1')
-GO
-GO
-INSERT INTO [dbo].[SYS_FUNC_ROLE_R] ([FUNC_ID], [FUNC_CODE], [FUNC_NAME], [ROLE_ID], [ROLE_CODE], [ROLE_NAME], [AUTHUSER], [AUTHTIME], [DELETED], [ID], [VERSION]) VALUES (N'402881cd5fc2b709015fc2d6b7ea0000', null, null, N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, N'2018-05-17 13:28:25.530', N'0', N'4028da63636b78bf01636c921f5a0031', N'1')
-GO
-GO
-
--- ----------------------------
--- Table structure for SYS_RES_CONTENT
--- ----------------------------
-DROP TABLE [dbo].[SYS_RES_CONTENT]
-GO
-CREATE TABLE [dbo].[SYS_RES_CONTENT] (
-[ID] varchar(50) NOT NULL ,
-[CODE] varchar(50) NULL ,
-[NAME] varchar(100) NULL ,
-[SJLX] varchar(20) NULL ,
-[MLTYPE] varchar(20) NULL ,
-[PID] varchar(50) NULL ,
-[SSML] varchar(50) NULL ,
-[SORT] int NULL ,
-[CREATEUSER] varchar(100) NULL ,
-[CREATETIME] datetime NULL ,
-[BZ] varchar(600) NULL ,
-[VERSION] int NULL ,
-[DELETED] varchar(20) NULL ,
-[HASINFO] varchar(20) NULL ,
-[ICON_P] varchar(100) NULL ,
-[URL] varchar(100) NULL 
+prompt Creating SYS_RES_CONTENT...
+create table SYS_RES_CONTENT
+(
+  id         VARCHAR2(50) not null,
+  code       VARCHAR2(50),
+  name       VARCHAR2(100),
+  sjlx       VARCHAR2(20),
+  mltype     VARCHAR2(20),
+  pid        VARCHAR2(50),
+  ssml       VARCHAR2(50),
+  sort       INTEGER,
+  createuser VARCHAR2(100),
+  createtime DATE,
+  bz         VARCHAR2(600),
+  version    INTEGER,
+  deleted    VARCHAR2(20),
+  hasinfo    VARCHAR2(20),
+  icon_p     VARCHAR2(100),
+  url        VARCHAR2(100)
 )
+tablespace OLDSUN01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
 
-
-GO
-
--- ----------------------------
--- Records of SYS_RES_CONTENT
--- ----------------------------
-INSERT INTO [dbo].[SYS_RES_CONTENT] ([ID], [CODE], [NAME], [SJLX], [MLTYPE], [PID], [SSML], [SORT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [HASINFO], [ICON_P], [URL]) VALUES (N'2', null, N'地图服务', N'2', N'1', N'0', null, null, null, null, null, null, null, null, N'/home/image/recourse/dtfw.png', N'view/dataMart/shadow.jsp')
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_CONTENT] ([ID], [CODE], [NAME], [SJLX], [MLTYPE], [PID], [SSML], [SORT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [HASINFO], [ICON_P], [URL]) VALUES (N'4028198163684b7a0163685105b70004', null, N'服务1', N'2', N'0', N'40283f816366ec35016368280e530006', N'ArcGIS切片服务', N'1', null, N'2018-05-16 06:38:50.413', N'', N'1', N'0', N'0', null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_CONTENT] ([ID], [CODE], [NAME], [SJLX], [MLTYPE], [PID], [SSML], [SORT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [HASINFO], [ICON_P], [URL]) VALUES (N'4028198163684b7a0163685136120005', null, N'服务2', N'2', N'0', N'40283f816366ec35016368280e530006', N'ArcGIS切片服务', N'2', null, N'2018-05-16 06:39:02.793', N'', N'1', N'0', N'0', null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_CONTENT] ([ID], [CODE], [NAME], [SJLX], [MLTYPE], [PID], [SSML], [SORT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [HASINFO], [ICON_P], [URL]) VALUES (N'40283f816366ec35016368280e530006', null, N'ArcGIS切片服务', N'2', N'1', N'2', N'地图服务', N'1', null, N'2018-05-16 05:54:05.583', N'', N'1', N'0', N'0', null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_CONTENT] ([ID], [CODE], [NAME], [SJLX], [MLTYPE], [PID], [SSML], [SORT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [HASINFO], [ICON_P], [URL]) VALUES (N'402881376486c5e50164874f63be0001', null, N'测试', N'2', N'1', N'2', N'地图服务', N'2', null, N'2018-07-11 11:08:04.407', N'', N'1', N'0', N'0', null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_CONTENT] ([ID], [CODE], [NAME], [SJLX], [MLTYPE], [PID], [SSML], [SORT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [HASINFO], [ICON_P], [URL]) VALUES (N'402881576467fb48016468385f740000', null, N'abc', N'2', N'0', N'40283f816366ec35016368280e530006', N'ArcGIS切片服务', N'1', null, N'2018-07-05 10:14:42.287', N'', N'1', N'0', N'0', null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_CONTENT] ([ID], [CODE], [NAME], [SJLX], [MLTYPE], [PID], [SSML], [SORT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [HASINFO], [ICON_P], [URL]) VALUES (N'4028819064edf9de0164eedf7d080000', null, N'服务3', N'2', N'0', N'40283f816366ec35016368280e530006', N'ArcGIS切片服务', N'3', null, N'2018-07-31 13:46:21.287', N'', N'1', N'0', N'0', null, null)
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_CONTENT] ([ID], [CODE], [NAME], [SJLX], [MLTYPE], [PID], [SSML], [SORT], [CREATEUSER], [CREATETIME], [BZ], [VERSION], [DELETED], [HASINFO], [ICON_P], [URL]) VALUES (N'4028da6363764cca016376643bd90001', null, N'q', N'2', N'0', N'40283f816366ec35016368280e530006', N'ArcGIS切片服务', N'3', null, N'2018-05-19 11:14:30.483', N'', N'1', N'0', N'0', null, null)
-GO
-GO
-
--- ----------------------------
--- Table structure for SYS_RES_INFO
--- ----------------------------
-DROP TABLE [dbo].[SYS_RES_INFO]
-GO
-CREATE TABLE [dbo].[SYS_RES_INFO] (
-[ID] varchar(50) NOT NULL ,
-[NODEID] varchar(300) NULL ,
-[NAME] varchar(300) NULL ,
-[MLTYPE] varchar(50) NULL ,
-[DATYPE] varchar(50) NULL ,
-[URL] varchar(1000) NULL ,
-[DADESC] varchar(2000) NULL ,
-[FAMAT] varchar(50) NULL ,
-[DASIZE] varchar(500) NULL ,
-[SSMLMC] varchar(1000) NULL ,
-[SSMLID] varchar(100) NULL ,
-[SLT] varchar(2000) NULL ,
-[KEYWORD] varchar(50) NULL ,
-[ABSTRACT] varchar(1000) NULL ,
-[SCOPE] varchar(50) NULL ,
-[XXFL] varchar(50) NULL ,
-[ZTFL] varchar(100) NULL ,
-[CKZBX] varchar(2000) NULL ,
-[GXZQ] varchar(50) NULL ,
-[ZCR] varchar(300) NULL ,
-[METANAME] varchar(100) NULL ,
-[ALIANAME] varchar(100) NULL ,
-[METADESC] varchar(100) NULL ,
-[DWMC] varchar(100) NULL ,
-[DWDZ] varchar(100) NULL ,
-[LXRMC] varchar(100) NULL ,
-[EMAIL] varchar(50) NULL ,
-[WEBSITE] varchar(50) NULL ,
-[LXDH] varchar(50) NULL ,
-[FBRQ] datetime NULL ,
-[MINX] varchar(50) NULL ,
-[MINY] varchar(50) NULL ,
-[MAXX] varchar(50) NULL ,
-[MAXY] varchar(50) NULL ,
-[WKID] varchar(50) NULL ,
-[WKT] varchar(50) NULL ,
-[REQUESTMODE] varchar(50) NULL ,
-[SCCS] int NULL ,
-[LLCS] int NULL ,
-[SQCS] int NULL ,
-[VERSION] int NULL DEFAULT ((1)) ,
-[DELETED] int NULL DEFAULT ((0)) ,
-[CREATETIME] datetime NULL ,
-[PIDNAME] varchar(100) NULL ,
-[TYPE] varchar(10) NULL ,
-[PREFIX] varchar(100) NULL ,
-[ADDRESS] varchar(100) NULL ,
-[ZYBM] varchar(100) NULL ,
-[CROSS_TYPE] int NULL ,
-[CSJL] varchar(200) NULL ,
-[APPKEY] varchar(200) NULL ,
-[LUURL] varchar(200) NULL ,
-[METATYPE] varchar(1) NULL ,
-[FZ] varchar(200) NULL 
+prompt Creating SYS_RES_INFO...
+create table SYS_RES_INFO
+(
+  id          VARCHAR2(50) not null,
+  nodeid      VARCHAR2(300),
+  name        VARCHAR2(300),
+  mltype      VARCHAR2(50),
+  datype      VARCHAR2(50),
+  url         VARCHAR2(1000),
+  dadesc      VARCHAR2(2000),
+  famat       VARCHAR2(50),
+  dasize      VARCHAR2(500),
+  ssmlmc      VARCHAR2(1000),
+  ssmlid      VARCHAR2(100),
+  slt         VARCHAR2(2000),
+  keyword     VARCHAR2(50),
+  abstract    VARCHAR2(1000),
+  scope       VARCHAR2(50),
+  xxfl        VARCHAR2(50),
+  ztfl        VARCHAR2(100),
+  ckzbx       VARCHAR2(2000),
+  gxzq        VARCHAR2(50),
+  zcr         VARCHAR2(300),
+  metaname    VARCHAR2(100),
+  alianame    VARCHAR2(100),
+  metadesc    VARCHAR2(100),
+  dwmc        VARCHAR2(100),
+  dwdz        VARCHAR2(100),
+  lxrmc       VARCHAR2(100),
+  email       VARCHAR2(50),
+  website     VARCHAR2(50),
+  lxdh        VARCHAR2(50),
+  fbrq        DATE,
+  minx        VARCHAR2(50),
+  miny        VARCHAR2(50),
+  maxx        VARCHAR2(50),
+  maxy        VARCHAR2(50),
+  wkid        VARCHAR2(50),
+  wkt         VARCHAR2(50),
+  requestmode VARCHAR2(50),
+  sccs        INTEGER,
+  llcs        INTEGER,
+  sqcs        INTEGER,
+  version     INTEGER default ((1)),
+  deleted     INTEGER default ((0)),
+  createtime  DATE,
+  pidname     VARCHAR2(100),
+  type        VARCHAR2(10),
+  prefix      VARCHAR2(100),
+  address     VARCHAR2(100),
+  zybm        VARCHAR2(100),
+  cross_type  INTEGER,
+  csjl        VARCHAR2(200),
+  appkey      VARCHAR2(200),
+  luurl       VARCHAR2(200),
+  metatype    VARCHAR2(1),
+  fz          VARCHAR2(200)
 )
+tablespace OLDSUN01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
 
-
-GO
-
--- ----------------------------
--- Records of SYS_RES_INFO
--- ----------------------------
-INSERT INTO [dbo].[SYS_RES_INFO] ([ID], [NODEID], [NAME], [MLTYPE], [DATYPE], [URL], [DADESC], [FAMAT], [DASIZE], [SSMLMC], [SSMLID], [SLT], [KEYWORD], [ABSTRACT], [SCOPE], [XXFL], [ZTFL], [CKZBX], [GXZQ], [ZCR], [METANAME], [ALIANAME], [METADESC], [DWMC], [DWDZ], [LXRMC], [EMAIL], [WEBSITE], [LXDH], [FBRQ], [MINX], [MINY], [MAXX], [MAXY], [WKID], [WKT], [REQUESTMODE], [SCCS], [LLCS], [SQCS], [VERSION], [DELETED], [CREATETIME], [PIDNAME], [TYPE], [PREFIX], [ADDRESS], [ZYBM], [CROSS_TYPE], [CSJL], [APPKEY], [LUURL], [METATYPE], [FZ]) VALUES (N'4028198163684b7a0163685105b70004', N'4028198163684b7a0163685105b70004', N'服务1', null, N'0', N'http://192.168.1.62:6080/arcgis/rest/services/20170403/MapServer', N'', null, null, null, null, N'', null, null, null, null, null, null, null, N'王函', null, null, null, null, null, null, null, null, null, N'2018-05-15 08:00:00.000', null, null, null, null, null, null, N'POST', null, null, null, null, null, null, null, N'2', null, null, null, null, null, null, null, null, N'ArcGIS')
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_INFO] ([ID], [NODEID], [NAME], [MLTYPE], [DATYPE], [URL], [DADESC], [FAMAT], [DASIZE], [SSMLMC], [SSMLID], [SLT], [KEYWORD], [ABSTRACT], [SCOPE], [XXFL], [ZTFL], [CKZBX], [GXZQ], [ZCR], [METANAME], [ALIANAME], [METADESC], [DWMC], [DWDZ], [LXRMC], [EMAIL], [WEBSITE], [LXDH], [FBRQ], [MINX], [MINY], [MAXX], [MAXY], [WKID], [WKT], [REQUESTMODE], [SCCS], [LLCS], [SQCS], [VERSION], [DELETED], [CREATETIME], [PIDNAME], [TYPE], [PREFIX], [ADDRESS], [ZYBM], [CROSS_TYPE], [CSJL], [APPKEY], [LUURL], [METATYPE], [FZ]) VALUES (N'4028198163684b7a0163685136120005', N'4028198163684b7a0163685136120005', N'服务2', null, N'0', N'http://192.168.1.62:6080/arcgis/rest/services/20170514/MapServer', N'', null, null, null, null, N'', null, null, null, null, null, null, null, N'王函', null, null, null, null, null, null, null, null, null, N'2018-05-15 08:00:00.000', null, null, null, null, null, null, N'POST', null, null, null, null, null, null, null, N'2', null, null, null, null, null, null, null, null, N'ArcGIS')
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_INFO] ([ID], [NODEID], [NAME], [MLTYPE], [DATYPE], [URL], [DADESC], [FAMAT], [DASIZE], [SSMLMC], [SSMLID], [SLT], [KEYWORD], [ABSTRACT], [SCOPE], [XXFL], [ZTFL], [CKZBX], [GXZQ], [ZCR], [METANAME], [ALIANAME], [METADESC], [DWMC], [DWDZ], [LXRMC], [EMAIL], [WEBSITE], [LXDH], [FBRQ], [MINX], [MINY], [MAXX], [MAXY], [WKID], [WKT], [REQUESTMODE], [SCCS], [LLCS], [SQCS], [VERSION], [DELETED], [CREATETIME], [PIDNAME], [TYPE], [PREFIX], [ADDRESS], [ZYBM], [CROSS_TYPE], [CSJL], [APPKEY], [LUURL], [METATYPE], [FZ]) VALUES (N'402881576467fb48016468385f740000', N'402881576467fb48016468385f740000', N'abc', null, N'1', N'/', N'', null, null, null, null, N'', null, null, null, null, null, null, null, N'王函', null, null, null, null, null, null, null, null, null, N'2018-07-05 08:00:00.000', null, null, null, null, null, null, N'POST', null, null, null, null, null, null, null, N'2', null, null, null, null, null, null, null, null, N'ArcGIS')
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_INFO] ([ID], [NODEID], [NAME], [MLTYPE], [DATYPE], [URL], [DADESC], [FAMAT], [DASIZE], [SSMLMC], [SSMLID], [SLT], [KEYWORD], [ABSTRACT], [SCOPE], [XXFL], [ZTFL], [CKZBX], [GXZQ], [ZCR], [METANAME], [ALIANAME], [METADESC], [DWMC], [DWDZ], [LXRMC], [EMAIL], [WEBSITE], [LXDH], [FBRQ], [MINX], [MINY], [MAXX], [MAXY], [WKID], [WKT], [REQUESTMODE], [SCCS], [LLCS], [SQCS], [VERSION], [DELETED], [CREATETIME], [PIDNAME], [TYPE], [PREFIX], [ADDRESS], [ZYBM], [CROSS_TYPE], [CSJL], [APPKEY], [LUURL], [METATYPE], [FZ]) VALUES (N'4028819064edf9de0164eedf7d080000', N'4028819064edf9de0164eedf7d080000', N'服务3', null, N'1', N'/', N'', null, null, null, null, N'', null, null, null, null, null, null, null, N'王思', null, null, null, null, null, null, null, null, null, N'2018-07-31 08:00:00.000', null, null, null, null, null, null, N'POST', null, null, null, N'1', N'0', null, null, N'2', null, null, null, null, null, null, null, null, N'ArcGIS')
-GO
-GO
-INSERT INTO [dbo].[SYS_RES_INFO] ([ID], [NODEID], [NAME], [MLTYPE], [DATYPE], [URL], [DADESC], [FAMAT], [DASIZE], [SSMLMC], [SSMLID], [SLT], [KEYWORD], [ABSTRACT], [SCOPE], [XXFL], [ZTFL], [CKZBX], [GXZQ], [ZCR], [METANAME], [ALIANAME], [METADESC], [DWMC], [DWDZ], [LXRMC], [EMAIL], [WEBSITE], [LXDH], [FBRQ], [MINX], [MINY], [MAXX], [MAXY], [WKID], [WKT], [REQUESTMODE], [SCCS], [LLCS], [SQCS], [VERSION], [DELETED], [CREATETIME], [PIDNAME], [TYPE], [PREFIX], [ADDRESS], [ZYBM], [CROSS_TYPE], [CSJL], [APPKEY], [LUURL], [METATYPE], [FZ]) VALUES (N'4028da6363764cca016376643bd90001', N'4028da6363764cca016376643bd90001', N'q', null, N'0', N'/', N'', null, null, null, null, N'/server/2018-05-19/a2582452-56f2-43b2-b466-aaef199feb0e_气象站.png', null, null, null, null, null, null, null, N'王思', null, null, null, null, null, null, null, null, null, N'2018-05-19 08:00:00.000', null, null, null, null, null, null, N'POST', null, null, null, N'1', N'0', null, null, N'2', null, null, null, null, null, null, null, null, N'ArcGIS')
-GO
-GO
-
--- ----------------------------
--- Table structure for SYS_ROLE
--- ----------------------------
-DROP TABLE [dbo].[SYS_ROLE]
-GO
-CREATE TABLE [dbo].[SYS_ROLE] (
-[ROLE_ID] varchar(50) NOT NULL ,
-[ROLE_CODE] varchar(100) NULL ,
-[ROLE_NAME] varchar(100) NULL ,
-[ROLE_DESC] varchar(200) NULL ,
-[CREATEUSER] varchar(50) NULL ,
-[CREATETIME] datetime NULL ,
-[DELETED] int NULL DEFAULT ((0)) ,
-[VERSION] int NULL DEFAULT ((1)) ,
-[SITE_ID] int NULL 
+prompt Creating SYS_ROLE...
+create table SYS_ROLE
+(
+  role_id    VARCHAR2(50) not null,
+  role_code  VARCHAR2(100),
+  role_name  VARCHAR2(100),
+  role_desc  VARCHAR2(200),
+  createuser VARCHAR2(50),
+  createtime DATE,
+  deleted    INTEGER default ((0)),
+  version    INTEGER default ((1)),
+  site_id    INTEGER
 )
+tablespace OLDSUN01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
 
-
-GO
-
--- ----------------------------
--- Records of SYS_ROLE
--- ----------------------------
-INSERT INTO [dbo].[SYS_ROLE] ([ROLE_ID], [ROLE_CODE], [ROLE_NAME], [ROLE_DESC], [CREATEUSER], [CREATETIME], [DELETED], [VERSION], [SITE_ID]) VALUES (N'25ddf321-c039-40d3-9b12-ab781572a822', N'TEST_ROLE', N'查看功能角色', null, null, null, N'0', N'2', null)
-GO
-GO
-INSERT INTO [dbo].[SYS_ROLE] ([ROLE_ID], [ROLE_CODE], [ROLE_NAME], [ROLE_DESC], [CREATEUSER], [CREATETIME], [DELETED], [VERSION], [SITE_ID]) VALUES (N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', N'SUPER_MANAGER', N'超级管理员', N'该角色拥有全部权限', null, null, N'0', N'3', null)
-GO
-GO
-INSERT INTO [dbo].[SYS_ROLE] ([ROLE_ID], [ROLE_CODE], [ROLE_NAME], [ROLE_DESC], [CREATEUSER], [CREATETIME], [DELETED], [VERSION], [SITE_ID]) VALUES (N'615c89f44a774873b48e7f004029ca0d', N'GENERAL_MANAGER', N'一般管理员', N'拥有种植管理、基础管理', null, null, N'0', N'4', null)
-GO
-GO
-
--- ----------------------------
--- Table structure for SYS_ROLE_CONTENT
--- ----------------------------
-DROP TABLE [dbo].[SYS_ROLE_CONTENT]
-GO
-CREATE TABLE [dbo].[SYS_ROLE_CONTENT] (
-[ID] varchar(50) NOT NULL ,
-[ROLE_ID] varchar(50) NULL ,
-[CON_ID] varchar(50) NULL 
+prompt Creating SYS_ROLE_CONTENT...
+create table SYS_ROLE_CONTENT
+(
+  id      VARCHAR2(50) not null,
+  role_id VARCHAR2(50),
+  con_id  VARCHAR2(50)
 )
+tablespace OLDSUN01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
 
-
-GO
-
--- ----------------------------
--- Records of SYS_ROLE_CONTENT
--- ----------------------------
-INSERT INTO [dbo].[SYS_ROLE_CONTENT] ([ID], [ROLE_ID], [CON_ID]) VALUES (N'4028819064edf9de0164eee012a00001', N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', N'40283f816366ec35016368280e530006')
-GO
-GO
-INSERT INTO [dbo].[SYS_ROLE_CONTENT] ([ID], [ROLE_ID], [CON_ID]) VALUES (N'4028819064edf9de0164eee012b00002', N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', N'4028819064edf9de0164eedf7d080000')
-GO
-GO
-INSERT INTO [dbo].[SYS_ROLE_CONTENT] ([ID], [ROLE_ID], [CON_ID]) VALUES (N'4028819064edf9de0164eee012c10003', N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', N'4028198163684b7a0163685136120005')
-GO
-GO
-INSERT INTO [dbo].[SYS_ROLE_CONTENT] ([ID], [ROLE_ID], [CON_ID]) VALUES (N'4028819064edf9de0164eee012d20004', N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', N'4028198163684b7a0163685105b70004')
-GO
-GO
-
--- ----------------------------
--- Table structure for SYS_USER
--- ----------------------------
-DROP TABLE [dbo].[SYS_USER]
-GO
-CREATE TABLE [dbo].[SYS_USER] (
-[USER_ID] varchar(50) NOT NULL ,
-[USER_NAME] varchar(100) NULL ,
-[USER_TYPE] varchar(20) NULL ,
-[PASSWORD] varchar(100) NULL ,
-[STATUS] varchar(10) NULL ,
-[CREATEUSER] varchar(10) NULL ,
-[CREATETIME] datetime NULL ,
-[GENDER] varchar(4) NULL ,
-[CARDTYPE] varchar(20) NULL ,
-[CARDNO] varchar(40) NULL ,
-[PARTY] varchar(20) NULL ,
-[DEPARTMENT] varchar(100) NULL ,
-[OADDRESS] varchar(100) NULL ,
-[POSITION] varchar(10) NULL ,
-[DEGREE] varchar(20) NULL ,
-[EMPSTATUS] varchar(10) NULL ,
-[OTEL] varchar(40) NULL ,
-[MOBILENO] varchar(40) NULL ,
-[QQ] varchar(50) NULL ,
-[EMAIL] varchar(40) NULL ,
-[WEIXIN] varchar(20) NULL ,
-[HADDRESS] varchar(200) NULL ,
-[REMARK] varchar(200) NULL ,
-[VERSION] int NULL DEFAULT ((1)) ,
-[DELETED] int NULL DEFAULT ((0)) ,
-[PHOTO] varchar(100) NULL ,
-[NICKNAME] varchar(100) NULL ,
-[XZDWCODE] varchar(100) NULL 
+prompt Creating SYS_USER...
+create table SYS_USER
+(
+  user_id    VARCHAR2(50) not null,
+  user_name  VARCHAR2(100),
+  user_type  VARCHAR2(20),
+  password   VARCHAR2(100),
+  status     VARCHAR2(10),
+  createuser VARCHAR2(10),
+  createtime DATE,
+  gender     VARCHAR2(4),
+  cardtype   VARCHAR2(20),
+  cardno     VARCHAR2(40),
+  party      VARCHAR2(20),
+  department VARCHAR2(100),
+  oaddress   VARCHAR2(100),
+  position   VARCHAR2(10),
+  degree     VARCHAR2(20),
+  empstatus  VARCHAR2(10),
+  otel       VARCHAR2(40),
+  mobileno   VARCHAR2(40),
+  qq         VARCHAR2(50),
+  email      VARCHAR2(40),
+  weixin     VARCHAR2(20),
+  haddress   VARCHAR2(200),
+  remark     VARCHAR2(200),
+  version    INTEGER default ((1)),
+  deleted    INTEGER default ((0)),
+  photo      VARCHAR2(100),
+  nickname   VARCHAR2(100),
+  xzdwcode   VARCHAR2(100)
 )
+tablespace OLDSUN01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
 
-
-GO
-
--- ----------------------------
--- Records of SYS_USER
--- ----------------------------
-INSERT INTO [dbo].[SYS_USER] ([USER_ID], [USER_NAME], [USER_TYPE], [PASSWORD], [STATUS], [CREATEUSER], [CREATETIME], [GENDER], [CARDTYPE], [CARDNO], [PARTY], [DEPARTMENT], [OADDRESS], [POSITION], [DEGREE], [EMPSTATUS], [OTEL], [MOBILENO], [QQ], [EMAIL], [WEIXIN], [HADDRESS], [REMARK], [VERSION], [DELETED], [PHOTO], [NICKNAME], [XZDWCODE]) VALUES (N'36fafa1a-21db-4aee-836b-39dbbb0bc4ee', N'lsf', null, N'4784a32b2b41a15e3c9753c01ab8bf11', N'1', null, null, null, null, null, null, N'中农信达', null, null, null, null, null, N'111111111111', null, null, null, null, null, null, N'0', null, N'凌树峰', null)
-GO
-GO
-INSERT INTO [dbo].[SYS_USER] ([USER_ID], [USER_NAME], [USER_TYPE], [PASSWORD], [STATUS], [CREATEUSER], [CREATETIME], [GENDER], [CARDTYPE], [CARDNO], [PARTY], [DEPARTMENT], [OADDRESS], [POSITION], [DEGREE], [EMPSTATUS], [OTEL], [MOBILENO], [QQ], [EMAIL], [WEIXIN], [HADDRESS], [REMARK], [VERSION], [DELETED], [PHOTO], [NICKNAME], [XZDWCODE]) VALUES (N'64b33c6d-dfa3-40dd-bf53-9ef6c0e370a5', N'wh', null, N'9483f1cdfaaff2562dd9185254cfb4f5', N'1', null, N'2018-05-15 09:10:36.913', null, null, null, null, N'中农信达', null, null, null, null, null, N'111111', null, null, null, null, null, N'1', N'0', null, N'王函', null)
-GO
-GO
-INSERT INTO [dbo].[SYS_USER] ([USER_ID], [USER_NAME], [USER_TYPE], [PASSWORD], [STATUS], [CREATEUSER], [CREATETIME], [GENDER], [CARDTYPE], [CARDNO], [PARTY], [DEPARTMENT], [OADDRESS], [POSITION], [DEGREE], [EMPSTATUS], [OTEL], [MOBILENO], [QQ], [EMAIL], [WEIXIN], [HADDRESS], [REMARK], [VERSION], [DELETED], [PHOTO], [NICKNAME], [XZDWCODE]) VALUES (N'd488ae4b-1954-4963-b3df-03fca79fd285', N'zy', null, N'a8ea4e884fe9c8116526c1f6abbffc4c', N'1', null, null, null, null, null, null, N'中农信达', null, null, null, null, null, N'111111111', null, null, null, null, null, null, N'0', null, N'张洋', null)
-GO
-GO
-INSERT INTO [dbo].[SYS_USER] ([USER_ID], [USER_NAME], [USER_TYPE], [PASSWORD], [STATUS], [CREATEUSER], [CREATETIME], [GENDER], [CARDTYPE], [CARDNO], [PARTY], [DEPARTMENT], [OADDRESS], [POSITION], [DEGREE], [EMPSTATUS], [OTEL], [MOBILENO], [QQ], [EMAIL], [WEIXIN], [HADDRESS], [REMARK], [VERSION], [DELETED], [PHOTO], [NICKNAME], [XZDWCODE]) VALUES (N'e9599d44-3345-4761-b964-c01afd8031bb', N'lipei', null, N'400e21b4940560285afff5fd4acc23dd', N'1', null, N'2018-07-10 17:06:10.383', null, null, null, null, N'中农信达', null, null, null, null, null, N'15911111111', null, null, null, null, null, N'1', N'0', null, N'李培', null)
-GO
-GO
-INSERT INTO [dbo].[SYS_USER] ([USER_ID], [USER_NAME], [USER_TYPE], [PASSWORD], [STATUS], [CREATEUSER], [CREATETIME], [GENDER], [CARDTYPE], [CARDNO], [PARTY], [DEPARTMENT], [OADDRESS], [POSITION], [DEGREE], [EMPSTATUS], [OTEL], [MOBILENO], [QQ], [EMAIL], [WEIXIN], [HADDRESS], [REMARK], [VERSION], [DELETED], [PHOTO], [NICKNAME], [XZDWCODE]) VALUES (N'ed89972a-670f-4701-b99e-4d784086a2ad', N'ws', null, N'e6aa57750ecfc2ecb3e1c72a763fbe95', N'1', null, N'2018-05-17 13:14:09.237', null, null, null, null, N'农科院遥感所', null, null, null, null, null, N'15680001190', null, null, null, null, null, N'1', N'0', null, N'王思', null)
-GO
-GO
-
--- ----------------------------
--- Table structure for SYS_USER_ROLE_R
--- ----------------------------
-DROP TABLE [dbo].[SYS_USER_ROLE_R]
-GO
-CREATE TABLE [dbo].[SYS_USER_ROLE_R] (
-[ID] varchar(50) NOT NULL ,
-[ROLE_ID] varchar(50) NULL ,
-[USER_ID] varchar(50) NULL ,
-[VERSION] int NULL DEFAULT ((1)) ,
-[CREATETIME] datetime NULL ,
-[DELETED] varchar(20) NULL DEFAULT ((0)) 
+prompt Creating SYS_USER_ROLE_R...
+create table SYS_USER_ROLE_R
+(
+  id         VARCHAR2(50) not null,
+  role_id    VARCHAR2(50),
+  user_id    VARCHAR2(50),
+  version    INTEGER default ((1)),
+  createtime DATE,
+  deleted    VARCHAR2(20) default ((0))
 )
+tablespace OLDSUN01
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
 
+prompt Disabling triggers for SYS_FUNC...
+alter table SYS_FUNC disable all triggers;
+prompt Disabling triggers for SYS_FUNC_ROLE_R...
+alter table SYS_FUNC_ROLE_R disable all triggers;
+prompt Disabling triggers for SYS_RES_CONTENT...
+alter table SYS_RES_CONTENT disable all triggers;
+prompt Disabling triggers for SYS_RES_INFO...
+alter table SYS_RES_INFO disable all triggers;
+prompt Disabling triggers for SYS_ROLE...
+alter table SYS_ROLE disable all triggers;
+prompt Disabling triggers for SYS_ROLE_CONTENT...
+alter table SYS_ROLE_CONTENT disable all triggers;
+prompt Disabling triggers for SYS_USER...
+alter table SYS_USER disable all triggers;
+prompt Disabling triggers for SYS_USER_ROLE_R...
+alter table SYS_USER_ROLE_R disable all triggers;
+prompt Deleting SYS_USER_ROLE_R...
+delete from SYS_USER_ROLE_R;
+commit;
+prompt Deleting SYS_USER...
+delete from SYS_USER;
+commit;
+prompt Deleting SYS_ROLE_CONTENT...
+delete from SYS_ROLE_CONTENT;
+commit;
+prompt Deleting SYS_ROLE...
+delete from SYS_ROLE;
+commit;
+prompt Deleting SYS_RES_INFO...
+delete from SYS_RES_INFO;
+commit;
+prompt Deleting SYS_RES_CONTENT...
+delete from SYS_RES_CONTENT;
+commit;
+prompt Deleting SYS_FUNC_ROLE_R...
+delete from SYS_FUNC_ROLE_R;
+commit;
+prompt Deleting SYS_FUNC...
+delete from SYS_FUNC;
+commit;
+prompt Loading SYS_FUNC...
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('1', null, '²Ëµ¥¹ÜÀí', null, '1', null, null, null, '0', null, null, '0', '1', null, null, null, null, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028198163633ca301636394362d0002', null, 'Êý×ÖµØÍ¼', '1', '0', null, '/SZMap.jsp', null, '4028810260d4809b0160d4be9e160000', null, 1, '0', '1', null, null, null, 3, null, 'glyphicon glyphicon-globe', null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028198163633ca30163639d19260003', null, 'ÍÁÈÀ¼ì²â', '1', '0', null, '/TRDetection.jsp', null, '4028810260d4809b0160d4be9e160000', null, 4, '0', '1', null, null, null, 3, null, 'glyphicon glyphicon-road', null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028198163633ca30163639e467e0004', null, 'Æøºò¹ÜÀí', '1', '0', null, '/wearth/wearth.jsp', null, '4028810260d4809b0160d4be9e160000', null, 5, '0', '1', null, null, null, 3, null, 'glyphicon glyphicon-leaf', null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028198163633ca30163639f227b0005', null, '»ù´¡¹ÜÀí', '1', '0', null, '/', null, '4028810260d4809b0160d4be9e160000', null, 7, '0', '1', null, null, null, 3, null, 'glyphicon glyphicon-th-list', null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028198163633ca30163639f9d180006', null, 'ÈËÔ±¿â¹ÜÀí', '2', '0', null, '/Personnel.jsp', null, '4028198163633ca30163639f227b0005', null, 1, '0', '1', null, null, null, 1, '0', null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028198163633ca30163639fee760007', null, '×÷Îï¿â¹ÜÀí', '2', '0', null, '/Plant.jsp', null, '4028198163633ca30163639f227b0005', null, 2, '0', '1', null, null, null, 1, '0', null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028198163633ca3016363a047860008', null, 'Å©×Ê¿â¹ÜÀí', '2', '0', null, '/Resources.jsp', null, '4028198163633ca30163639f227b0005', null, 3, '0', '1', null, null, null, 1, '0', null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028198163633ca3016363a0a1bf0009', null, 'Éè±¸¿â¹ÜÀí', '2', '0', null, '/Work.jsp', null, '4028198163633ca30163639f227b0005', null, 4, '0', '1', null, null, null, 2, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028198163633ca3016363a289e8000a', null, '·þÎñ¹ÜÀí', '2', '0', null, '/system/mapServer.jsp', null, '402881cd5fbd2daf015fbea277a60000', null, 4, '0', '1', null, null, null, 2, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028810260d4809b0160d4be9e160000', null, 'ÖÇ»ÛÅ©ÒµÔÆÆ½Ì¨', '0', '0', null, '/', null, '1', null, 1, '0', '1', 'lsf', null, null, 4, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881a25fd20311015fd20a6fdb0004', 'RoleAdmin_New', 'ÐÂ½¨', '3', '1', null, 'role_add', 'ÐÂ½¨', '402881cd5fbd2daf015fbea682710003', 4, 1, '0', '1', '¹ÜÀíÔ±', null, '½ÇÉ«¹ÜÀíÄ£¿é ÐÂ½¨½ÇÉ«¹¦ÄÜ', 5, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fbd2daf015fbea277a60000', null, 'ÏµÍ³¹ÜÀí', '1', '0', null, '/', null, '4028810260d4809b0160d4be9e160000', null, 8, '0', '1', '¹ÜÀíÔ±', null, 'ÏµÍ³¹ÜÀíÄ£¿é', 11, null, 'glyphicon glyphicon-cog', 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fbd2daf015fbea419fc0001', null, 'ÓÃ»§¹ÜÀí', '2', '0', null, '/system/userControl.jsp', null, '402881cd5fbd2daf015fbea277a60000', null, 1, '0', '1', null, null, '111', 2, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fbd2daf015fbea682710003', null, '½ÇÉ«¹ÜÀí', '2', '0', null, '/system/roleManage.jsp', null, '402881cd5fbd2daf015fbea277a60000', null, 2, '0', '1', '1', null, '½ÇÉ«¹ÜÀí¹¦ÄÜÒ³Ãæ', 6, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fbd2daf015fbea713d30004', null, 'ÖÖÖ²¹ÜÀí', '1', '0', null, '/ZZManage.jsp', null, '4028810260d4809b0160d4be9e160000', null, 3, '0', '1', null, null, null, 12, null, 'glyphicon glyphicon-tree-deciduous', 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fc2b709015fc2d6b7ea0000', null, 'ÏµÍ³Ãû³Æ', '0', '0', null, '/images/title_white.png', null, '4028810260d4809b0160d4be9e160000', null, 9, '0', '1', null, null, null, 9, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fc2b709015fc2ff1ca40006', null, 'Çø»®¹ÜÀí', '1', '0', null, '/index.jsp', null, '4028810260d4809b0160d4be9e160000', null, 2, '0', '1', '¹ÜÀíÔ±', null, 'Ê×Ò³', 9, null, 'glyphicon glyphicon-dashboard', 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fc2b709015fc3716f6c001a', null, '²Ëµ¥¹ÜÀí', '2', '0', null, '/system/menu.jsp', null, '402881cd5fbd2daf015fbea277a60000', null, 3, '0', '1', null, null, null, 5, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fc2b709015fc371bd68001b', null, '×Öµä¹ÜÀí', '2', '0', null, '/system/dictionaries.jsp', null, '402881cd5fbd2daf015fbea277a60000', null, 5, '0', '1', null, null, null, 3, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd397bdf001f', 'RoleAdmin_Edit', '±à¼­', '3', '1', null, 'role_update', '±à¼­', '402881cd5fbd2daf015fbea682710003', 4, 2, '0', '1', '¹ÜÀíÔ±', null, '½ÇÉ«¹ÜÀí ±à¼­¹¦ÄÜ', 5, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd3a99470020', 'RoleAdmin_Delete', 'É¾³ý', '3', '1', null, 'role_delete', '½ÇÉ«É¾³ý', '402881cd5fbd2daf015fbea682710003', 4, 3, '0', '1', '¹ÜÀíÔ±', null, '½ÇÉ«¹ÜÀí É¾³ý', 3, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd3bba8f0021', 'RoleAdmin_Right', '½ÇÉ«ÊÚÈ¨', '3', '1', null, 'role_authorize', '½ÇÉ«ÊÚÈ¨', '402881cd5fbd2daf015fbea682710003', 4, 4, '0', '1', '¹ÜÀíÔ±', null, '½ÇÉ«¹ÜÀí ÊÚÈ¨', 8, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd3e1f830022', 'MenuAdmin_New', 'ÐÂ½¨', '3', '1', null, 'fun_add', null, '402881cd5fc2b709015fc3716f6c001a', 4, 1, '0', '1', '¹ÜÀíÔ±', null, '²Ëµ¥¹ÜÀí ÐÂ½¨', 2, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd42144d0023', 'MenuAdmin_Delete', 'É¾³ý', '3', '1', null, 'fun_delete', null, '402881cd5fc2b709015fc3716f6c001a', 4, 2, '0', '1', '¹ÜÀíÔ±', null, 'É¾³ý²Ëµ¥Ïî', 2, null, null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd43cbdc0025', 'MenuAdmin_Save', '±£´æ', '3', '1', null, 'fun_save', '±£´æ', '402881cd5fc2b709015fc3716f6c001a', 4, 4, '0', '1', '¹ÜÀíÔ±', null, '±£´æ', 2, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd464dc00027', 'RoleAdmin_Query', '²éÑ¯', '3', '1', null, 'role_select', '²éÑ¯£¨°üº¬¸ß¼¶²éÑ¯£©', '402881cd5fbd2daf015fbea682710003', 4, 5, '0', '1', '¹ÜÀíÔ±', null, '²éÑ¯£¨°üº¬¸ß¼¶²éÑ¯£©', 2, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd474e910028', null, 'ÐÂ½¨', '3', '0', null, 'dict_add', null, '402881cd5fc2b709015fc371bd68001b', null, 1, '0', '1', '¹ÜÀíÔ±', null, 'ÐÂ½¨×Öµä', 3, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd47f76c0029', null, '±à¼­', '3', '0', null, 'dict_edit', null, '402881cd5fc2b709015fc371bd68001b', null, 2, '0', '1', '¹ÜÀíÔ±', null, '±à¼­×Öµä', 3, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd490c71002a', null, 'É¾³ý', '3', '0', null, 'dict_delete', null, '402881cd5fc2b709015fc371bd68001b', null, 3, '0', '1', '¹ÜÀíÔ±', null, 'É¾³ý×Öµä', 3, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd4bc895002c', 'DictAdmin_Save', '±£´æ', '3', '1', null, 'dict_save', '±£´æ', '402881cd5fc2b709015fc371bd68001b', 4, 5, '0', '1', '¹ÜÀíÔ±', null, '±£´æ', 2, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd4d3dc7002d', 'UserAdmin_New', 'ÐÂ½¨', '3', '1', null, 'user_add', 'ÐÂ½¨', '402881cd5fbd2daf015fbea419fc0001', 4, 1, '0', '1', '¹ÜÀíÔ±', null, 'ÐÂ½¨', 2, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd5fdd05af015fdd4f16db002e', 'UserAdmin_Delete', 'É¾³ý', '3', '1', null, 'user_delete', 'É¾³ý', '402881cd5fbd2daf015fbea419fc0001', 4, 2, '0', '1', '¹ÜÀíÔ±', null, 'É¾³ý', 3, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd6005a026016005d45011005c', 'UserAdmin_revamp', 'ÐÞ¸Ä', '3', '1', null, 'user_revamp', null, '402881cd5fbd2daf015fbea419fc0001', null, 3, '0', '1', 'cyq', null, null, 1, '0', null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd6005a026016005db7589005d', 'UserAdmin_Query', '²éÑ¯', '3', '1', null, 'user_select', null, '402881cd5fbd2daf015fbea419fc0001', null, 4, '0', '1', 'cyq', null, null, 1, '0', null, 1, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('402881cd609fe01b0160a008c75c0001', 'UserAdmin_Right', 'ÓÃ»§ÊÚÈ¨', '3', '1', null, 'user_authorize', null, '402881cd5fbd2daf015fbea419fc0001', null, 6, '0', '1', 'cyq', null, null, 2, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028da63636b78bf01636c8cbebf0003', null, 'Ìì¿ÕµØÒ£¸Ð·´ÑÝ', '1', '0', null, '/', null, '4028810260d4809b0160d4be9e160000', null, 6, '0', '1', null, null, null, 2, null, 'glyphicon glyphicon-retweet', null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028da63636b78bf01636c901c2a0004', null, '³¤ÊÆ¼à²â', '2', '0', null, '/fanyan/one.jsp', null, '4028da63636b78bf01636c8cbebf0003', null, 1, '0', '1', null, null, null, 6, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028da63636b78bf01636c91046e0005', null, '³ÉÊì¶È¼à²â', '2', '0', null, '/fanyan/two.jsp', null, '4028da63636b78bf01636c8cbebf0003', null, 2, '0', '1', null, null, null, 2, null, null, null, '1', null, null, null, null);
+insert into SYS_FUNC (id, func_code, name, func_type, isopen, opendate, func_url, func_desc, pid, func_level, func_seq, isleaf, isparent, createuser, createtime, bz, version, deleted, classfield, open, siteid, grouptype, serviceaddr, selectlayer, tablename)
+values ('4028da63636b78bf01636c917ec50006', null, 'Æ·ÖÊ¼ì²â', '2', '0', null, '/fanyan/three.jsp', null, '4028da63636b78bf01636c8cbebf0003', null, 3, '0', '1', null, null, null, 2, null, null, null, '1', null, null, null, null);
+commit;
+prompt 40 records loaded
+prompt Loading SYS_FUNC_ROLE_R...
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fbd2daf015fbea713d30004', null, null, '615c89f44a774873b48e7f004029ca0d', null, null, null, to_date('15-05-2018 09:09:52', 'dd-mm-yyyy hh24:mi:ss'), '0', '402819816363a69a016363b4f177002a', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca30163639f227b0005', null, null, '615c89f44a774873b48e7f004029ca0d', null, null, null, to_date('15-05-2018 09:09:52', 'dd-mm-yyyy hh24:mi:ss'), '0', '402819816363a69a016363b4f18f002b', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca30163639f9d180006', null, null, '615c89f44a774873b48e7f004029ca0d', null, null, null, to_date('15-05-2018 09:09:52', 'dd-mm-yyyy hh24:mi:ss'), '0', '402819816363a69a016363b4f1a9002c', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca30163639fee760007', null, null, '615c89f44a774873b48e7f004029ca0d', null, null, null, to_date('15-05-2018 09:09:52', 'dd-mm-yyyy hh24:mi:ss'), '0', '402819816363a69a016363b4f1bf002d', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca3016363a047860008', null, null, '615c89f44a774873b48e7f004029ca0d', null, null, null, to_date('15-05-2018 09:09:52', 'dd-mm-yyyy hh24:mi:ss'), '0', '402819816363a69a016363b4f1d6002e', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca3016363a0a1bf0009', null, null, '615c89f44a774873b48e7f004029ca0d', null, null, null, to_date('15-05-2018 09:09:52', 'dd-mm-yyyy hh24:mi:ss'), '0', '402819816363a69a016363b4f1eb002f', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fc2b709015fc2d6b7ea0000', null, null, '615c89f44a774873b48e7f004029ca0d', null, null, null, to_date('15-05-2018 09:09:52', 'dd-mm-yyyy hh24:mi:ss'), '0', '402819816363a69a016363b4f2000030', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fbd2daf015fbea277a60000', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a41801637254045d0038', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fbd2daf015fbea419fc0001', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a41801637254046e0039', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd4d3dc7002d', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a418016372540481003a', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fbd2daf015fbea682710003', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a418016372540493003b', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881a25fd20311015fd20a6fdb0004', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a4180163725404a6003c', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd397bdf001f', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a4180163725404b6003d', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd3a99470020', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a4180163725404c5003e', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd464dc00027', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a4180163725404d5003f', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fc2b709015fc3716f6c001a', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a4180163725404e40040', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd3e1f830022', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a4180163725404f60041', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca3016363a289e8000a', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a4180163725405080042', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fc2b709015fc371bd68001b', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a41801637254051b0043', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd474e910028', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a41801637254052c0044', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd47f76c0029', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a4180163725405420045', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd490c71002a', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a4180163725405580046', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd4bc895002c', null, null, '25ddf321-c039-40d3-9b12-ab781572a822', null, null, null, to_date('18-05-2018 05:18:18', 'dd-mm-yyyy hh24:mi:ss'), '0', '40282d816370a4180163725405710047', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028810260d4809b0160d4be9e160000', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921ebf0007', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca301636394362d0002', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921ec90008', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fc2b709015fc2ff1ca40006', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921ed20009', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fbd2daf015fbea713d30004', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921ed7000a', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca30163639d19260003', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921edc000b', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca30163639e467e0004', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921ee1000c', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028da63636b78bf01636c8cbebf0003', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921ee6000d', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028da63636b78bf01636c901c2a0004', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921eeb000e', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028da63636b78bf01636c91046e0005', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921eef000f', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028da63636b78bf01636c917ec50006', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921ef30010', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca30163639f227b0005', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921ef80011', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca30163639f9d180006', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921efc0012', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca30163639fee760007', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921eff0013', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca3016363a047860008', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f020014', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca3016363a0a1bf0009', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f050015', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fbd2daf015fbea277a60000', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f080016', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fbd2daf015fbea419fc0001', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f0b0017', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd4d3dc7002d', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f0e0018', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd4f16db002e', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f110019', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd6005a026016005d45011005c', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f15001a', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd6005a026016005db7589005d', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f18001b', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd4ff988002f', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f1b001c', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd609fe01b0160a008c75c0001', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f1e001d', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fbd2daf015fbea682710003', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f21001e', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881a25fd20311015fd20a6fdb0004', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f24001f', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd397bdf001f', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f270020', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd3a99470020', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f2a0021', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd3bba8f0021', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f2d0022', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd464dc00027', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f300023', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fc2b709015fc3716f6c001a', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f330024', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd3e1f830022', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f360025', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd42144d0023', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f390026', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd42cd710024', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f3c0027', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd43cbdc0025', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f3f0028', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd44cb640026', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f420029', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('4028198163633ca3016363a289e8000a', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f45002a', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fc2b709015fc371bd68001b', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f48002b', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd474e910028', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f4b002c', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd47f76c0029', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f4e002d', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd490c71002a', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f51002e', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd4aa169002b', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f54002f', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fdd05af015fdd4bc895002c', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f570030', 1);
+insert into SYS_FUNC_ROLE_R (func_id, func_code, func_name, role_id, role_code, role_name, authuser, authtime, deleted, id, version)
+values ('402881cd5fc2b709015fc2d6b7ea0000', null, null, '2fb87947-cafd-4805-b4d3-cffd46ea48e5', null, null, null, to_date('17-05-2018 13:28:25', 'dd-mm-yyyy hh24:mi:ss'), '0', '4028da63636b78bf01636c921f5a0031', 1);
+commit;
+prompt 66 records loaded
+prompt Loading SYS_RES_CONTENT...
+insert into SYS_RES_CONTENT (id, code, name, sjlx, mltype, pid, ssml, sort, createuser, createtime, bz, version, deleted, hasinfo, icon_p, url)
+values ('2', null, 'µØÍ¼·þÎñ', '2', '1', '0', null, null, null, null, null, null, null, null, '/home/image/recourse/dtfw.png', 'view/dataMart/shadow.jsp');
+insert into SYS_RES_CONTENT (id, code, name, sjlx, mltype, pid, ssml, sort, createuser, createtime, bz, version, deleted, hasinfo, icon_p, url)
+values ('4028198163684b7a0163685105b70004', null, '·þÎñ1', '2', '0', '40283f816366ec35016368280e530006', 'ArcGISÇÐÆ¬·þÎñ', 1, null, to_date('16-05-2018 06:38:50', 'dd-mm-yyyy hh24:mi:ss'), null, 1, '0', '0', null, null);
+insert into SYS_RES_CONTENT (id, code, name, sjlx, mltype, pid, ssml, sort, createuser, createtime, bz, version, deleted, hasinfo, icon_p, url)
+values ('4028198163684b7a0163685136120005', null, '·þÎñ2', '2', '0', '40283f816366ec35016368280e530006', 'ArcGISÇÐÆ¬·þÎñ', 2, null, to_date('16-05-2018 06:39:02', 'dd-mm-yyyy hh24:mi:ss'), null, 1, '0', '0', null, null);
+insert into SYS_RES_CONTENT (id, code, name, sjlx, mltype, pid, ssml, sort, createuser, createtime, bz, version, deleted, hasinfo, icon_p, url)
+values ('40283f816366ec35016368280e530006', null, 'ArcGISÇÐÆ¬·þÎñ', '2', '1', '2', 'µØÍ¼·þÎñ', 1, null, to_date('16-05-2018 05:54:05', 'dd-mm-yyyy hh24:mi:ss'), null, 1, '0', '0', null, null);
+insert into SYS_RES_CONTENT (id, code, name, sjlx, mltype, pid, ssml, sort, createuser, createtime, bz, version, deleted, hasinfo, icon_p, url)
+values ('402881376486c5e50164874f63be0001', null, '²âÊÔ', '2', '1', '2', 'µØÍ¼·þÎñ', 2, null, to_date('11-07-2018 11:08:04', 'dd-mm-yyyy hh24:mi:ss'), null, 1, '0', '0', null, null);
+insert into SYS_RES_CONTENT (id, code, name, sjlx, mltype, pid, ssml, sort, createuser, createtime, bz, version, deleted, hasinfo, icon_p, url)
+values ('402881576467fb48016468385f740000', null, 'abc', '2', '0', '40283f816366ec35016368280e530006', 'ArcGISÇÐÆ¬·þÎñ', 1, null, to_date('05-07-2018 10:14:42', 'dd-mm-yyyy hh24:mi:ss'), null, 1, '0', '0', null, null);
+insert into SYS_RES_CONTENT (id, code, name, sjlx, mltype, pid, ssml, sort, createuser, createtime, bz, version, deleted, hasinfo, icon_p, url)
+values ('4028819064edf9de0164eedf7d080000', null, '·þÎñ3', '2', '0', '40283f816366ec35016368280e530006', 'ArcGISÇÐÆ¬·þÎñ', 3, null, to_date('31-07-2018 13:46:21', 'dd-mm-yyyy hh24:mi:ss'), null, 1, '0', '0', null, null);
+insert into SYS_RES_CONTENT (id, code, name, sjlx, mltype, pid, ssml, sort, createuser, createtime, bz, version, deleted, hasinfo, icon_p, url)
+values ('4028da6363764cca016376643bd90001', null, 'q', '2', '0', '40283f816366ec35016368280e530006', 'ArcGISÇÐÆ¬·þÎñ', 3, null, to_date('19-05-2018 11:14:30', 'dd-mm-yyyy hh24:mi:ss'), null, 1, '0', '0', null, null);
+commit;
+prompt 8 records loaded
+prompt Loading SYS_RES_INFO...
+insert into SYS_RES_INFO (id, nodeid, name, mltype, datype, url, dadesc, famat, dasize, ssmlmc, ssmlid, slt, keyword, abstract, scope, xxfl, ztfl, ckzbx, gxzq, zcr, metaname, alianame, metadesc, dwmc, dwdz, lxrmc, email, website, lxdh, fbrq, minx, miny, maxx, maxy, wkid, wkt, requestmode, sccs, llcs, sqcs, version, deleted, createtime, pidname, type, prefix, address, zybm, cross_type, csjl, appkey, luurl, metatype, fz)
+values ('4028198163684b7a0163685105b70004', '4028198163684b7a0163685105b70004', '·þÎñ1', null, '0', 'http://192.168.1.62:6080/arcgis/rest/services/20170403/MapServer', null, null, null, null, null, null, null, null, null, null, null, null, null, 'Íõº¯', null, null, null, null, null, null, null, null, null, to_date('15-05-2018 08:00:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, null, null, null, null, 'POST', null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, 'ArcGIS');
+insert into SYS_RES_INFO (id, nodeid, name, mltype, datype, url, dadesc, famat, dasize, ssmlmc, ssmlid, slt, keyword, abstract, scope, xxfl, ztfl, ckzbx, gxzq, zcr, metaname, alianame, metadesc, dwmc, dwdz, lxrmc, email, website, lxdh, fbrq, minx, miny, maxx, maxy, wkid, wkt, requestmode, sccs, llcs, sqcs, version, deleted, createtime, pidname, type, prefix, address, zybm, cross_type, csjl, appkey, luurl, metatype, fz)
+values ('4028198163684b7a0163685136120005', '4028198163684b7a0163685136120005', '·þÎñ2', null, '0', 'http://192.168.1.62:6080/arcgis/rest/services/20170514/MapServer', null, null, null, null, null, null, null, null, null, null, null, null, null, 'Íõº¯', null, null, null, null, null, null, null, null, null, to_date('15-05-2018 08:00:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, null, null, null, null, 'POST', null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, 'ArcGIS');
+insert into SYS_RES_INFO (id, nodeid, name, mltype, datype, url, dadesc, famat, dasize, ssmlmc, ssmlid, slt, keyword, abstract, scope, xxfl, ztfl, ckzbx, gxzq, zcr, metaname, alianame, metadesc, dwmc, dwdz, lxrmc, email, website, lxdh, fbrq, minx, miny, maxx, maxy, wkid, wkt, requestmode, sccs, llcs, sqcs, version, deleted, createtime, pidname, type, prefix, address, zybm, cross_type, csjl, appkey, luurl, metatype, fz)
+values ('402881576467fb48016468385f740000', '402881576467fb48016468385f740000', 'abc', null, '1', '/', null, null, null, null, null, null, null, null, null, null, null, null, null, 'Íõº¯', null, null, null, null, null, null, null, null, null, to_date('05-07-2018 08:00:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, null, null, null, null, 'POST', null, null, null, null, null, null, null, '2', null, null, null, null, null, null, null, null, 'ArcGIS');
+insert into SYS_RES_INFO (id, nodeid, name, mltype, datype, url, dadesc, famat, dasize, ssmlmc, ssmlid, slt, keyword, abstract, scope, xxfl, ztfl, ckzbx, gxzq, zcr, metaname, alianame, metadesc, dwmc, dwdz, lxrmc, email, website, lxdh, fbrq, minx, miny, maxx, maxy, wkid, wkt, requestmode, sccs, llcs, sqcs, version, deleted, createtime, pidname, type, prefix, address, zybm, cross_type, csjl, appkey, luurl, metatype, fz)
+values ('4028819064edf9de0164eedf7d080000', '4028819064edf9de0164eedf7d080000', '·þÎñ3', null, '1', '/', null, null, null, null, null, null, null, null, null, null, null, null, null, 'ÍõË¼', null, null, null, null, null, null, null, null, null, to_date('31-07-2018 08:00:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, null, null, null, null, 'POST', null, null, null, 1, 0, null, null, '2', null, null, null, null, null, null, null, null, 'ArcGIS');
+insert into SYS_RES_INFO (id, nodeid, name, mltype, datype, url, dadesc, famat, dasize, ssmlmc, ssmlid, slt, keyword, abstract, scope, xxfl, ztfl, ckzbx, gxzq, zcr, metaname, alianame, metadesc, dwmc, dwdz, lxrmc, email, website, lxdh, fbrq, minx, miny, maxx, maxy, wkid, wkt, requestmode, sccs, llcs, sqcs, version, deleted, createtime, pidname, type, prefix, address, zybm, cross_type, csjl, appkey, luurl, metatype, fz)
+values ('4028da6363764cca016376643bd90001', '4028da6363764cca016376643bd90001', 'q', null, '0', '/', null, null, null, null, null, '/server/2018-05-19/a2582452-56f2-43b2-b466-aaef199feb0e_ÆøÏóÕ¾.png', null, null, null, null, null, null, null, 'ÍõË¼', null, null, null, null, null, null, null, null, null, to_date('19-05-2018 08:00:00', 'dd-mm-yyyy hh24:mi:ss'), null, null, null, null, null, null, 'POST', null, null, null, 1, 0, null, null, '2', null, null, null, null, null, null, null, null, 'ArcGIS');
+commit;
+prompt 5 records loaded
+prompt Loading SYS_ROLE...
+insert into SYS_ROLE (role_id, role_code, role_name, role_desc, createuser, createtime, deleted, version, site_id)
+values ('25ddf321-c039-40d3-9b12-ab781572a822', 'TEST_ROLE', '²é¿´¹¦ÄÜ½ÇÉ«', null, null, null, 0, 2, null);
+insert into SYS_ROLE (role_id, role_code, role_name, role_desc, createuser, createtime, deleted, version, site_id)
+values ('2fb87947-cafd-4805-b4d3-cffd46ea48e5', 'SUPER_MANAGER', '³¬¼¶¹ÜÀíÔ±', '¸Ã½ÇÉ«ÓµÓÐÈ«²¿È¨ÏÞ', null, null, 0, 3, null);
+insert into SYS_ROLE (role_id, role_code, role_name, role_desc, createuser, createtime, deleted, version, site_id)
+values ('615c89f44a774873b48e7f004029ca0d', 'GENERAL_MANAGER', 'Ò»°ã¹ÜÀíÔ±', 'ÓµÓÐÖÖÖ²¹ÜÀí¡¢»ù´¡¹ÜÀí', null, null, 0, 4, null);
+commit;
+prompt 3 records loaded
+prompt Loading SYS_ROLE_CONTENT...
+insert into SYS_ROLE_CONTENT (id, role_id, con_id)
+values ('4028819064edf9de0164eee012a00001', '2fb87947-cafd-4805-b4d3-cffd46ea48e5', '40283f816366ec35016368280e530006');
+insert into SYS_ROLE_CONTENT (id, role_id, con_id)
+values ('4028819064edf9de0164eee012b00002', '2fb87947-cafd-4805-b4d3-cffd46ea48e5', '4028819064edf9de0164eedf7d080000');
+insert into SYS_ROLE_CONTENT (id, role_id, con_id)
+values ('4028819064edf9de0164eee012c10003', '2fb87947-cafd-4805-b4d3-cffd46ea48e5', '4028198163684b7a0163685136120005');
+insert into SYS_ROLE_CONTENT (id, role_id, con_id)
+values ('4028819064edf9de0164eee012d20004', '2fb87947-cafd-4805-b4d3-cffd46ea48e5', '4028198163684b7a0163685105b70004');
+commit;
+prompt 4 records loaded
+prompt Loading SYS_USER...
+insert into SYS_USER (user_id, user_name, user_type, password, status, createuser, createtime, gender, cardtype, cardno, party, department, oaddress, position, degree, empstatus, otel, mobileno, qq, email, weixin, haddress, remark, version, deleted, photo, nickname, xzdwcode)
+values ('36fafa1a-21db-4aee-836b-39dbbb0bc4ee', 'lsf', null, 'e10adc3949ba59abbe56e057f20f883e', '1', null, null, null, null, null, null, 'ÖÐÅ©ÐÅ´ï', null, null, null, null, null, '111111111111', null, null, null, null, null, null, 0, null, 'ÁèÊ÷·å', null);
+insert into SYS_USER (user_id, user_name, user_type, password, status, createuser, createtime, gender, cardtype, cardno, party, department, oaddress, position, degree, empstatus, otel, mobileno, qq, email, weixin, haddress, remark, version, deleted, photo, nickname, xzdwcode)
+values ('64b33c6d-dfa3-40dd-bf53-9ef6c0e370a5', 'wh', null, 'e10adc3949ba59abbe56e057f20f883e', '1', null, to_date('15-05-2018 09:10:36', 'dd-mm-yyyy hh24:mi:ss'), null, null, null, null, 'ÖÐÅ©ÐÅ´ï', null, null, null, null, null, '111111', null, null, null, null, null, 1, 0, null, 'Íõº¯', null);
+insert into SYS_USER (user_id, user_name, user_type, password, status, createuser, createtime, gender, cardtype, cardno, party, department, oaddress, position, degree, empstatus, otel, mobileno, qq, email, weixin, haddress, remark, version, deleted, photo, nickname, xzdwcode)
+values ('d488ae4b-1954-4963-b3df-03fca79fd285', 'zy', null, 'e10adc3949ba59abbe56e057f20f883e', '1', null, null, null, null, null, null, 'ÖÐÅ©ÐÅ´ï', null, null, null, null, null, '111111111', null, null, null, null, null, null, 0, null, 'ÕÅÑó', null);
+insert into SYS_USER (user_id, user_name, user_type, password, status, createuser, createtime, gender, cardtype, cardno, party, department, oaddress, position, degree, empstatus, otel, mobileno, qq, email, weixin, haddress, remark, version, deleted, photo, nickname, xzdwcode)
+values ('e9599d44-3345-4761-b964-c01afd8031bb', 'guo', null, 'bc58e08e0fd67ce591a6be23f84a957c', '1', null, to_date('10-07-2018 17:06:10', 'dd-mm-yyyy hh24:mi:ss'), null, null, null, null, 'ÖÐÅ©ÐÅ´ï', null, null, null, null, null, '15911111111', null, null, null, null, null, 1, 0, null, 'ÀîÅà', null);
+insert into SYS_USER (user_id, user_name, user_type, password, status, createuser, createtime, gender, cardtype, cardno, party, department, oaddress, position, degree, empstatus, otel, mobileno, qq, email, weixin, haddress, remark, version, deleted, photo, nickname, xzdwcode)
+values ('ed89972a-670f-4701-b99e-4d784086a2ad', 'fan', null, 'fc1709d0a95a6be30bc5926fdb7f22f4', '1', null, to_date('17-05-2018 13:14:09', 'dd-mm-yyyy hh24:mi:ss'), null, null, null, null, 'Å©¿ÆÔºÒ£¸ÐËù', null, null, null, null, null, '15680001190', null, null, null, null, null, 1, 0, null, 'ÍõË¼', null);
+commit;
+prompt 5 records loaded
+prompt Loading SYS_USER_ROLE_R...
+insert into SYS_USER_ROLE_R (id, role_id, user_id, version, createtime, deleted)
+values ('402819816363a69a016363b5c05c0031', '2fb87947-cafd-4805-b4d3-cffd46ea48e5', '64b33c6d-dfa3-40dd-bf53-9ef6c0e370a5', 1, null, '0');
+insert into SYS_USER_ROLE_R (id, role_id, user_id, version, createtime, deleted)
+values ('40281981636bd59001636ca3ba020001', '2fb87947-cafd-4805-b4d3-cffd46ea48e5', 'd488ae4b-1954-4963-b3df-03fca79fd285', 1, null, '0');
+insert into SYS_USER_ROLE_R (id, role_id, user_id, version, createtime, deleted)
+values ('40282d816361eb0e01636245f4030001', '615c89f44a774873b48e7f004029ca0d', '62219617ee63400b9b064ddbadafa8c1', 1, null, '0');
+insert into SYS_USER_ROLE_R (id, role_id, user_id, version, createtime, deleted)
+values ('40282d816370a4180163724ce8f70013', '25ddf321-c039-40d3-9b12-ab781572a822', '36fafa1a-21db-4aee-836b-39dbbb0bc4ee', 1, null, '0');
+insert into SYS_USER_ROLE_R (id, role_id, user_id, version, createtime, deleted)
+values ('402881376481b32c0164837ce6580000', '25ddf321-c039-40d3-9b12-ab781572a822', 'e9599d44-3345-4761-b964-c01afd8031bb', 1, null, '0');
+insert into SYS_USER_ROLE_R (id, role_id, user_id, version, createtime, deleted)
+values ('402881376481b32c0164837ce6600001', '2fb87947-cafd-4805-b4d3-cffd46ea48e5', 'e9599d44-3345-4761-b964-c01afd8031bb', 1, null, '0');
+insert into SYS_USER_ROLE_R (id, role_id, user_id, version, createtime, deleted)
+values ('402881376481b32c0164837ce6680002', '615c89f44a774873b48e7f004029ca0d', 'e9599d44-3345-4761-b964-c01afd8031bb', 1, null, '0');
+insert into SYS_USER_ROLE_R (id, role_id, user_id, version, createtime, deleted)
+values ('4028da63636b78bf01636c86be210002', '2fb87947-cafd-4805-b4d3-cffd46ea48e5', 'ed89972a-670f-4701-b99e-4d784086a2ad', 1, null, '0');
+commit;
+prompt 8 records loaded
+prompt Enabling triggers for SYS_FUNC...
+alter table SYS_FUNC enable all triggers;
+prompt Enabling triggers for SYS_FUNC_ROLE_R...
+alter table SYS_FUNC_ROLE_R enable all triggers;
+prompt Enabling triggers for SYS_RES_CONTENT...
+alter table SYS_RES_CONTENT enable all triggers;
+prompt Enabling triggers for SYS_RES_INFO...
+alter table SYS_RES_INFO enable all triggers;
+prompt Enabling triggers for SYS_ROLE...
+alter table SYS_ROLE enable all triggers;
+prompt Enabling triggers for SYS_ROLE_CONTENT...
+alter table SYS_ROLE_CONTENT enable all triggers;
+prompt Enabling triggers for SYS_USER...
+alter table SYS_USER enable all triggers;
+prompt Enabling triggers for SYS_USER_ROLE_R...
+alter table SYS_USER_ROLE_R enable all triggers;
 
-GO
-
--- ----------------------------
--- Records of SYS_USER_ROLE_R
--- ----------------------------
-INSERT INTO [dbo].[SYS_USER_ROLE_R] ([ID], [ROLE_ID], [USER_ID], [VERSION], [CREATETIME], [DELETED]) VALUES (N'402819816363a69a016363b5c05c0031', N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', N'64b33c6d-dfa3-40dd-bf53-9ef6c0e370a5', N'1', N'2018-05-15 00:00:00.000', N'0')
-GO
-GO
-INSERT INTO [dbo].[SYS_USER_ROLE_R] ([ID], [ROLE_ID], [USER_ID], [VERSION], [CREATETIME], [DELETED]) VALUES (N'40281981636bd59001636ca3ba020001', N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', N'd488ae4b-1954-4963-b3df-03fca79fd285', N'1', N'2018-05-17 00:00:00.000', N'0')
-GO
-GO
-INSERT INTO [dbo].[SYS_USER_ROLE_R] ([ID], [ROLE_ID], [USER_ID], [VERSION], [CREATETIME], [DELETED]) VALUES (N'40282d816361eb0e01636245f4030001', N'615c89f44a774873b48e7f004029ca0d', N'62219617ee63400b9b064ddbadafa8c1', N'1', N'2018-05-15 00:00:00.000', N'0')
-GO
-GO
-INSERT INTO [dbo].[SYS_USER_ROLE_R] ([ID], [ROLE_ID], [USER_ID], [VERSION], [CREATETIME], [DELETED]) VALUES (N'40282d816370a4180163724ce8f70013', N'25ddf321-c039-40d3-9b12-ab781572a822', N'36fafa1a-21db-4aee-836b-39dbbb0bc4ee', N'1', N'2018-05-18 05:10:33.063', N'0')
-GO
-GO
-INSERT INTO [dbo].[SYS_USER_ROLE_R] ([ID], [ROLE_ID], [USER_ID], [VERSION], [CREATETIME], [DELETED]) VALUES (N'402881376481b32c0164837ce6580000', N'25ddf321-c039-40d3-9b12-ab781572a822', N'e9599d44-3345-4761-b964-c01afd8031bb', N'1', N'2018-07-10 17:19:18.063', N'0')
-GO
-GO
-INSERT INTO [dbo].[SYS_USER_ROLE_R] ([ID], [ROLE_ID], [USER_ID], [VERSION], [CREATETIME], [DELETED]) VALUES (N'402881376481b32c0164837ce6600001', N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', N'e9599d44-3345-4761-b964-c01afd8031bb', N'1', N'2018-07-10 17:19:18.110', N'0')
-GO
-GO
-INSERT INTO [dbo].[SYS_USER_ROLE_R] ([ID], [ROLE_ID], [USER_ID], [VERSION], [CREATETIME], [DELETED]) VALUES (N'402881376481b32c0164837ce6680002', N'615c89f44a774873b48e7f004029ca0d', N'e9599d44-3345-4761-b964-c01afd8031bb', N'1', N'2018-07-10 17:19:18.117', N'0')
-GO
-GO
-INSERT INTO [dbo].[SYS_USER_ROLE_R] ([ID], [ROLE_ID], [USER_ID], [VERSION], [CREATETIME], [DELETED]) VALUES (N'4028da63636b78bf01636c86be210002', N'2fb87947-cafd-4805-b4d3-cffd46ea48e5', N'ed89972a-670f-4701-b99e-4d784086a2ad', N'1', N'2018-05-17 00:00:00.000', N'0')
-GO
-GO
-
--- ----------------------------
--- Indexes structure for table SYS_FUNC
--- ----------------------------
-
--- ----------------------------
--- Primary Key structure for table SYS_FUNC
--- ----------------------------
-ALTER TABLE [dbo].[SYS_FUNC] ADD PRIMARY KEY ([ID])
-GO
-
--- ----------------------------
--- Indexes structure for table SYS_FUNC_ROLE_R
--- ----------------------------
-
--- ----------------------------
--- Primary Key structure for table SYS_FUNC_ROLE_R
--- ----------------------------
-ALTER TABLE [dbo].[SYS_FUNC_ROLE_R] ADD PRIMARY KEY ([ID])
-GO
-
--- ----------------------------
--- Indexes structure for table SYS_RES_CONTENT
--- ----------------------------
-
--- ----------------------------
--- Primary Key structure for table SYS_RES_CONTENT
--- ----------------------------
-ALTER TABLE [dbo].[SYS_RES_CONTENT] ADD PRIMARY KEY ([ID])
-GO
-
--- ----------------------------
--- Indexes structure for table SYS_RES_INFO
--- ----------------------------
-
--- ----------------------------
--- Primary Key structure for table SYS_RES_INFO
--- ----------------------------
-ALTER TABLE [dbo].[SYS_RES_INFO] ADD PRIMARY KEY ([ID])
-GO
-
--- ----------------------------
--- Indexes structure for table SYS_ROLE
--- ----------------------------
-
--- ----------------------------
--- Primary Key structure for table SYS_ROLE
--- ----------------------------
-ALTER TABLE [dbo].[SYS_ROLE] ADD PRIMARY KEY ([ROLE_ID])
-GO
-
--- ----------------------------
--- Indexes structure for table SYS_ROLE_CONTENT
--- ----------------------------
-
--- ----------------------------
--- Primary Key structure for table SYS_ROLE_CONTENT
--- ----------------------------
-ALTER TABLE [dbo].[SYS_ROLE_CONTENT] ADD PRIMARY KEY ([ID])
-GO
-
--- ----------------------------
--- Indexes structure for table SYS_USER
--- ----------------------------
-
--- ----------------------------
--- Primary Key structure for table SYS_USER
--- ----------------------------
-ALTER TABLE [dbo].[SYS_USER] ADD PRIMARY KEY ([USER_ID])
-GO
-
--- ----------------------------
--- Uniques structure for table SYS_USER
--- ----------------------------
-ALTER TABLE [dbo].[SYS_USER] ADD UNIQUE ([USER_NAME] ASC)
-GO
-
--- ----------------------------
--- Indexes structure for table SYS_USER_ROLE_R
--- ----------------------------
-
--- ----------------------------
--- Primary Key structure for table SYS_USER_ROLE_R
--- ----------------------------
-ALTER TABLE [dbo].[SYS_USER_ROLE_R] ADD PRIMARY KEY ([ID])
-GO
+set feedback on
+set define on
+prompt Done
