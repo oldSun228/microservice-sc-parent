@@ -6,6 +6,7 @@ import com.alibaba.dubbo.common.utils.StringUtils;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import microservice.sc.shiro.RedisUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.session.Session;
@@ -25,6 +26,9 @@ import java.util.Map;
 
 @Controller //如果用RestController，比如login.html就会只显示值，必须用controller注解才可以显示页面
 public class LoginCheckController {
+
+    @Autowired
+    RedisUtils redisUtils;
     /*存入session里的用户名称*/
     public static final String SESSION_USER = "sessionUser";
     public ObjectMapper jsonTranster = new ObjectMapper();
@@ -117,6 +121,7 @@ public class LoginCheckController {
         //使用权限管理工具进行用户的退出，跳出登录，给出提示信息
         Subject subject = SecurityUtils.getSubject();
         if (subject.isAuthenticated()) {
+//            redisUtils.del(subject.getSession().getId());
             subject.logout();
         }
         return "redirect:/login";

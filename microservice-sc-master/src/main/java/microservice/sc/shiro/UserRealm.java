@@ -67,7 +67,6 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         UsernamePasswordToken upt = (UsernamePasswordToken) token;
-//        char[] passwords = upt.getPassword();
         String pwd = new String(upt.getPassword());
         if (!StringUtils.isEmpty(pwd)) { //如果密码不是空,表示是本地登录
             User user = this.userService.findUserByUserName(upt.getUsername());

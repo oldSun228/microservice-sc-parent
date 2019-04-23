@@ -17,6 +17,7 @@
  <h2>可尝试访问 主项目   http://localhost:30000/test</h2>
  <h2>可尝试访问 从项目1  http://localhost:30001/test</h2>
  <h2>可尝试访问 从项目2  http://localhost:30002/test</h2>
+ <h2>可尝试访问 从项目2  http://localhost:30003/test</h2>
     <p><a href="/logout">退出</a></p>
 </body>
 </html>
