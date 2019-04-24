@@ -1,6 +1,7 @@
 package microservice.sc.shiro;
 
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.filter.authc.AnonymousFilter;
@@ -51,7 +52,14 @@ public class ShiroConfig {
     public ShiroFilterFactoryBean shiroFilter() {
         ShiroFilterFactoryBean bean = new MShiroFilterFactoryBean(); //指向自定义过滤器，自定义过滤器对js/css等忽略
         bean.setSecurityManager(securityManager());
+        //配置shiro默认登录界面地址，前后端分离中登录界面跳转应由前端路由控制，后台仅返回json数据
         bean.setLoginUrl(masterLoginUrl);
+        // 登录成功后要跳转的链接 自行处理。不用shiro进行跳转
+        // bean.setSuccessUrl("user/index");
+        //未授权界面;
+        //bean.setUnauthorizedUrl("/user/unauth");
+
+
         Map<String, Filter> filters = new LinkedHashMap<>();
         filters.put("anon", new AnonymousFilter());
         bean.setFilters(filters);
@@ -59,6 +67,7 @@ public class ShiroConfig {
         Map<String, String> chains = new LinkedHashMap<>();
         chains.put("/login", "anon");
         chains.put("/loginForm", "anon");
+        chains.put("/favicon.ico", "anon");
         chains.put("/**", "authc");
         bean.setFilterChainDefinitionMap(chains);
         return bean;
@@ -72,7 +81,9 @@ public class ShiroConfig {
     public DefaultWebSecurityManager securityManager() {
         DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
         manager.setRealm(userRealm());
-        //manager.setCacheManager(cacheManager());
+        // 注入缓存管理器;
+//        manager.setCacheManager(cacheManager());
+        // 会话管理
         manager.setSessionManager(defaultWebSessionManager());
         return manager;
     }
@@ -88,13 +99,14 @@ public class ShiroConfig {
      */
     @Bean(name = "sessionManager")
     public DefaultWebSessionManager defaultWebSessionManager() {
-        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
-        //sessionManager.setCacheManager(cacheManager());
+//        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
+        CustomSessionManager sessionManager = new CustomSessionManager();
+//        sessionManager.setCacheManager(cacheManager());
         sessionManager.setGlobalSessionTimeout(43200000); //12小时
         sessionManager.setDeleteInvalidSessions(true);
         sessionManager.setSessionDAO(getRedisSessionDao());
-        sessionManager.setSessionValidationSchedulerEnabled(true);
-        sessionManager.setDeleteInvalidSessions(true);
+        sessionManager.setSessionValidationSchedulerEnabled(true);// 是否定时检查session
+        sessionManager.setDeleteInvalidSessions(true);// 删除过期的session
         sessionManager.setSessionIdCookie(getSessionIdCookie());
         return sessionManager;
     }
@@ -133,12 +145,12 @@ public class ShiroConfig {
 //    }
 
 	
-	/*@Bean
-	public EhCacheManager cacheManager() {
-		EhCacheManager cacheManager = new EhCacheManager();
-		cacheManager.setCacheManagerConfigFile("classpath:ehcache.xml");
-		return cacheManager;
-	}*/
+//	@Bean
+//	public EhCacheManager cacheManager() {
+//		EhCacheManager cacheManager = new EhCacheManager();
+//		cacheManager.setCacheManagerConfigFile("classpath:ehcache.xml");
+//		return cacheManager;
+//	}
 
     /**
      * 该类如果不设置为static，@Value注解就无效，原因未知

@@ -83,8 +83,12 @@ public class RedisConfiguration extends CachingConfigurerSupport {
         RedisSerializer stringSerializer = new StringRedisSerializer();
         redisTemplate.setKeySerializer(stringSerializer); // key序列化
 ////        redisTemplate.setValueSerializer(stringSerializer); // value序列化
+//        redisTemplate.setValueSerializer(jackson2JsonRedisSerializer); // value序列化
+        redisTemplate.setValueSerializer(new JdkSerializationRedisSerializer()); // value序列化
         redisTemplate.setKeySerializer(stringSerializer); // key序列化
 ////        redisTemplate.setHashValueSerializer(stringSerializer); // Hash value序列化
+//        redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer); // Hash value序列化
+        redisTemplate.setHashValueSerializer(new JdkSerializationRedisSerializer()); // Hash value序列化
 //        redisTemplate.afterPropertiesSet();
         return redisTemplate;
     }
@@ -108,15 +112,10 @@ public class RedisConfiguration extends CachingConfigurerSupport {
         redisTemplate.setConnectionFactory(jedisConnectionFactory);
 
         RedisSerializer stringSerializer = new StringRedisSerializer();
-//        redisTemplate.setKeySerializer(stringSerializer); // key序列化
-//        redisTemplate.setValueSerializer(jackson2JsonRedisSerializer); // value序列化
-//        redisTemplate.setKeySerializer(new StringRedisSerializer()); // key序列化
         redisTemplate.setKeySerializer(stringSerializer); // key序列化
-        redisTemplate.setValueSerializer(new JdkSerializationRedisSerializer()); // value序列化
-//        redisTemplate.setHashKeySerializer(stringSerializer); // Hash key序列化
-//        redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer); // Hash value序列化
+        redisTemplate.setValueSerializer(jackson2JsonRedisSerializer); // value序列化
         redisTemplate.setKeySerializer(stringSerializer); // key序列化
-        redisTemplate.setHashValueSerializer(new JdkSerializationRedisSerializer()); // Hash value序列化
+        redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer); // Hash value序列化
         redisTemplate.afterPropertiesSet();
         return redisTemplate;
     }
