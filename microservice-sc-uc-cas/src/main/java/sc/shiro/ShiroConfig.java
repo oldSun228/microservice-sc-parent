@@ -65,7 +65,6 @@ public class ShiroConfig {
 //		chains.put("/login/check","anon");
         chains.put("/**", "authc");
         bean.setFilterChainDefinitionMap(chains);
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>进jar包啦！！！！" + suiteLoginUrl + ">>>>>>>>>>>>>>>" + jessionId);
         return bean;
     }
 
@@ -93,24 +92,14 @@ public class ShiroConfig {
      */
     @Bean(name = "sessionManager")
     public DefaultWebSessionManager defaultWebSessionManager() {
-        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
-        //sessionManager.setCacheManager(cacheManager());
+        CustomSessionManager sessionManager = new CustomSessionManager();
+//        sessionManager.setCacheManager(cacheManager());
         sessionManager.setGlobalSessionTimeout(43200000); //12小时
         sessionManager.setDeleteInvalidSessions(true);
-
-        sessionManager.setSessionValidationSchedulerEnabled(true);
-        sessionManager.setDeleteInvalidSessions(true);
-        sessionManager.setSessionIdCookie(getSessionIdCookie());
-
-
         sessionManager.setSessionDAO(getRedisSessionDao());
-
-//        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
-//        Collection<SessionListener> listeners = new ArrayList<>();
-//        listeners.add(new MySessionListener());
-//        sessionManager.setSessionListeners(listeners);
-//        sessionManager.setSessionDAO(getRedisSessionDao());
-
+        sessionManager.setSessionValidationSchedulerEnabled(true);// 是否定时检查session
+        sessionManager.setDeleteInvalidSessions(true);// 删除过期的session
+        sessionManager.setSessionIdCookie(getSessionIdCookie());
         return sessionManager;
     }
 
@@ -135,7 +124,7 @@ public class ShiroConfig {
     public UserRealm userRealm() {
         UserRealm userRealm = new UserRealm();
         //userRealm.setJwtService(jwtService);
-        userRealm.setCredentialsMatcher(credentialsMatcher());
+//        userRealm.setCredentialsMatcher(credentialsMatcher());
         //userRealm.setCacheManager(cacheManager());
         //设置加密方式
         userRealm.setCredentialsMatcher(hashedCredentialsMatcher());

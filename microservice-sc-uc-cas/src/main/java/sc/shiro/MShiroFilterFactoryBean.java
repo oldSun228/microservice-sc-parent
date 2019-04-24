@@ -73,7 +73,8 @@ public class MShiroFilterFactoryBean extends ShiroFilterFactoryBean{
         }
 
         @Override
-        protected void doFilterInternal(ServletRequest servletRequest, ServletResponse servletResponse,FilterChain chain) throws ServletException, IOException {
+        protected void doFilterInternal(ServletRequest servletRequest, ServletResponse servletResponse,
+                FilterChain chain) throws ServletException, IOException {
 
             HttpServletRequest request = (HttpServletRequest)servletRequest;
             String str = request.getRequestURI().toLowerCase();
